@@ -304,7 +304,6 @@ var lyr_MilitaryGrid_16 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/MilitaryGrid_16.png" /> MilitaryGrid'
             });
-
 var group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079 = new ol.layer.Group({
                                 layers: [],
                                 fold: "open",
