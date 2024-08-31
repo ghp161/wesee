@@ -11,6 +11,9 @@
         <link href="resources/ol-geocoder.min.css" rel="stylesheet">
         <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
         <link rel="stylesheet" href="./resources/qgis2web.css">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
         <style>
         html, body {
             background-color: #ffffff;
@@ -42,10 +45,51 @@
             padding: 0;
             margin: 0;
         }
+		
+		/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: white;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar img {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 150px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
         </style>
         <title></title>
     </head>
     <body>
+	<div class="navbar">
+<img class="logo" src="images/logo.png" alt="My Image">
+  
+</div>
+
         <div id="map">
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
@@ -53,13 +97,15 @@
             </div>
         </div>
         <script src="resources/qgis2web_expressions.js"></script>
+<script src="resources/proj4.js"></script>
+        <script>proj4.defs('EPSG:4326','+proj=longlat +datum=WGS84 +no_defs');</script>
         <script src="resources/polyfills.js"></script>
         <script src="./resources/functions.js"></script>
         <script src="./resources/ol.js"></script>
         <script src="./resources/ol-layerswitcher.js"></script>
         <script src="resources/ol-geocoder.js"></script>
-        <script src="layers/rf_data_1.js"></script><script src="layers/Ownship_2.js"></script><script src="layers/ESM_EMITER_MPAC_3.js"></script><script src="layers/PirateAttacks20002022Dataworld_4.js"></script><script src="layers/VesselDetectionReportvakeai_5.js"></script><script src="layers/KSLPRIDERoutePathSearoutes_6.js"></script><script src="layers/AISMarineTrafficSouthIndianOcean_7.js"></script><script src="layers/PortsNaturalEarthData_8.js"></script><script src="layers/Earthquakesusgsgov_9.js"></script><script src="layers/NoticestoMariners_10.js"></script><script src="layers/GEORSS26Aug24GoogleNews_11.js"></script><script src="layers/FlightDataOpenskyNetwork_12.js"></script><script src="layers/MilitaryGrid_100_0_14.js"></script><script src="layers/MilitaryGrid_15.js"></script><script src="layers/EEZBoundariesv8MarineRegions_16.js"></script>
-        <script src="styles/rf_data_1_style.js"></script><script src="styles/Ownship_2_style.js"></script><script src="styles/ESM_EMITER_MPAC_3_style.js"></script><script src="styles/PirateAttacks20002022Dataworld_4_style.js"></script><script src="styles/VesselDetectionReportvakeai_5_style.js"></script><script src="styles/KSLPRIDERoutePathSearoutes_6_style.js"></script><script src="styles/AISMarineTrafficSouthIndianOcean_7_style.js"></script><script src="styles/PortsNaturalEarthData_8_style.js"></script><script src="styles/Earthquakesusgsgov_9_style.js"></script><script src="styles/NoticestoMariners_10_style.js"></script><script src="styles/GEORSS26Aug24GoogleNews_11_style.js"></script><script src="styles/FlightDataOpenskyNetwork_12_style.js"></script><script src="styles/MilitaryGrid_100_0_14_style.js"></script><script src="styles/MilitaryGrid_15_style.js"></script><script src="styles/EEZBoundariesv8MarineRegions_16_style.js"></script>
+        <script src="layers/rf_data_1.js"></script><script src="layers/Ownship_2.js"></script><script src="layers/ESM_EMITER_MPAC_3.js"></script><script src="layers/PirateAttacks20002022Dataworld_4.js"></script><script src="layers/VesselDetectionReportvakeai_5.js"></script><script src="layers/KSLPRIDERoutePathSearoutes_6.js"></script><script src="layers/PortsNaturalEarthData_7.js"></script><script src="layers/AISMarineTrafficSouthIndianOcean_8.js"></script><script src="layers/Earthquakesusgsgov_9.js"></script><script src="layers/NoticestoMariners_10.js"></script><script src="layers/FlightDataOpenskyNetwork_11.js"></script><script src="layers/GEORSS26Aug24GoogleNews_12.js"></script><script src="layers/MilitaryGrid_100_0_16.js"></script><script src="layers/MilitaryGrid_17.js"></script><script src="layers/EEZBoundariesv8MarineRegions_18.js"></script>
+        <script src="styles/rf_data_1_style.js"></script><script src="styles/Ownship_2_style.js"></script><script src="styles/ESM_EMITER_MPAC_3_style.js"></script><script src="styles/PirateAttacks20002022Dataworld_4_style.js"></script><script src="styles/VesselDetectionReportvakeai_5_style.js"></script><script src="styles/KSLPRIDERoutePathSearoutes_6_style.js"></script><script src="styles/PortsNaturalEarthData_7_style.js"></script><script src="styles/AISMarineTrafficSouthIndianOcean_8_style.js"></script><script src="styles/Earthquakesusgsgov_9_style.js"></script><script src="styles/NoticestoMariners_10_style.js"></script><script src="styles/FlightDataOpenskyNetwork_11_style.js"></script><script src="styles/GEORSS26Aug24GoogleNews_12_style.js"></script><script src="styles/MilitaryGrid_100_0_16_style.js"></script><script src="styles/MilitaryGrid_17_style.js"></script><script src="styles/EEZBoundariesv8MarineRegions_18_style.js"></script>
         <script src="./layers/layers.js" type="text/javascript"></script> 
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>
