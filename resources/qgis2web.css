@@ -24,13 +24,17 @@ html, body {
 .ol-popup {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: #031127 !important; 
+	font-family: sans-serif;
     padding: 15px;
 	border-radius: 10px;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 	box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+	min-width: 320px;
+	max-height:450px;
+	color:white;font-size: 14px;font-weight: bold;
 }
 
 .ol-popup:after, .ol-popup:before {
@@ -76,7 +80,9 @@ html, body {
     margin-top: 5px;
 	max-height: 70vh;
 	max-width: 70vw;
-	overflow: auto;
+	overflow: auto;	
+	border: 1px solid gray;
+	padding: 8px;
 }
 
 #popup-content ul {
@@ -99,6 +105,7 @@ html, body {
 
 #popup-content>table {
     font-size: 11.4px;
+	border: 1px solid gray;
 }
 
 .lds-roller-img{
@@ -113,9 +120,22 @@ th, td {
 
 th {
 	min-width: 100px;
+	color:#4191C5;font-size: 12px;font-weight: bold;
+	
 }
 td {
 	min-width: 100px;
+	color:white;font-size: 12px;font-weight: bold;
+}
+
+td strong {
+	min-width: 100px;
+	color:#4191C5;font-size: 12px;font-weight: bold;
+}
+
+td a {
+	min-width: 100px;
+	color:white;font-size: 12px;font-weight: bold;
 }
 
 td img {

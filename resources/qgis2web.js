@@ -4,12 +4,19 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1
+         maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
+            code: 'EPSG:4326',
+            //extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
+            units: 'degrees'}),
+			center: ol.proj.fromLonLat([16.62662018, 49.2125578]),
+    zoom: 14
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-34792060.245564, -19953449.926941, 40889893.658635, 22125317.592917], map.getSize());
+//map.setCenter(new ol.proj.fromLonLat(-93.9196,45.7326),5);
+map.getView().fit([61.533489, -12.026743, 120.876456, 25.945557], 5);
+//map.getView().fit([20, -80, 140, 30], map.getSize());
 
 ////controls container
 
@@ -111,6 +118,11 @@ var featureOverlay = new ol.layer.Vector({
 var doHighlight = true;
 var doHover = true;
 
+//hari
+function titleCase(str) {
+  return str.toLowerCase().replace(/\b\w/g, s => s.toUpperCase());
+}
+
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
     for (var i = 0; i < currentFeatureKeys.length; i++) {
@@ -125,7 +137,7 @@ function createPopupField(currentFeature, currentFeatureKeys, layer) {
             }
             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label - always visible" ||
                 layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label - visible with data") {
-                popupField += '<th>' + layer.get('fieldAliases')[currentFeatureKeys[i]] + '</th><td>';
+                popupField += '<th>' + titleCase(layer.get('fieldAliases')[currentFeatureKeys[i]]) + '</th><td>';	//hari add titlecase
             } else {
                 popupField += '<td colspan="2">';
             }
@@ -232,9 +244,10 @@ var onPointerMove = function(evt) {
                 if (currentFeature.getGeometry().getType() == 'Point' || currentFeature.getGeometry().getType() == 'MultiPoint') {
                     var radius
 					if (typeof clusteredFeatures == "undefined") {
-						radius = featureStyle.getImage().getRadius();
+						//radius = featureStyle.getImage().getRadius(); //hari
 					} else {
-						radius = parseFloat(featureStyle.split('radius')[1].split(' ')[1]) + clusterLenght;
+						if(featureStyle.split('radius')[1] != null)  //hari
+							radius = parseFloat(featureStyle.split('radius')[1].split(' ')[1]) + clusterLenght;
 					}
 
                     highlightStyle = new ol.style.Style({
