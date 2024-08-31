@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_AISMarineTrafficSouthIndianOcean_8 = function(feature, resolution){
+var style_FlightDataOpenskyNetwork_11 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -22,13 +22,13 @@ var style_AISMarineTrafficSouthIndianOcean_8 = function(feature, resolution){
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Icon({
-                  imgSize: [579.997, 579.997],
-                  scale: 0.02241390903746054,
-                  anchor: [6, 6],
+                  imgSize: [580, 580],
+                  scale: 0.02586206896551724,
+                  anchor: [7, 7],
                   anchorXUnits: "pixels",
                   anchorYUnits: "pixels",
-                  rotation: feature.get("COURSE"),
-                  src: "styles/Arrow_05_1.svg"
+                  rotation: feature.get("true_track"),
+                  src: "styles/transport_airport.svg"
             }),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,

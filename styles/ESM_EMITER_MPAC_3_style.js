@@ -17,8 +17,8 @@ var style_ESM_EMITER_MPAC_3 = function(feature, resolution){
     var offsetX = 8;
     var offsetY = 3;
     var placement = 'point';
-    if (feature.get("Evironment") !== null) {
-        labelText = String(feature.get("Evironment"));
+    if (feature.get("q2wHide_Evironment") !== null) {
+        labelText = String(feature.get("q2wHide_Evironment"));
     }
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 6.0 + size,

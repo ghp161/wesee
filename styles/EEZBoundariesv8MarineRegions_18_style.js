@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_AISMarineTrafficSouthIndianOcean_8 = function(feature, resolution){
+var style_EEZBoundariesv8MarineRegions_18 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -16,20 +16,12 @@ var style_AISMarineTrafficSouthIndianOcean_8 = function(feature, resolution){
     var textAlign = "left";
     var offsetX = 8;
     var offsetY = 3;
-    var placement = 'point';
+    var placement = 'line';
     if ("" !== null) {
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Icon({
-                  imgSize: [579.997, 579.997],
-                  scale: 0.02241390903746054,
-                  anchor: [6, 6],
-                  anchorXUnits: "pixels",
-                  anchorYUnits: "pixels",
-                  rotation: feature.get("COURSE"),
-                  src: "styles/Arrow_05_1.svg"
-            }),
+        stroke: new ol.style.Stroke({color: 'rgba(114,155,111,1.0)', lineDash: null, lineCap: 'square', lineJoin: 'bevel', width: 0.988}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
