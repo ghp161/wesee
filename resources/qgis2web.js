@@ -867,7 +867,7 @@ map.on("rendercomplete", function(evt) {
 			button.parentNode.removeChild(button);
 		}
 		var attributionList = attribution.getElementsByTagName('ul')[0];
-		/* if (attributionList) {
+		 if (attributionList) {
 			var qgis2webAttribution = document.createElement('li');
 			qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
 			attributionList.appendChild(qgis2webAttribution);
@@ -879,7 +879,7 @@ map.on("rendercomplete", function(evt) {
 			var qgisAttribution = document.createElement('li');
 			qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
 			attributionList.appendChild(qgisAttribution);
-		} */
+		} 
 	attributionComplete = true;
 	}
 })

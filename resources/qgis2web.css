@@ -396,6 +396,7 @@ td video {
     margin-bottom: 0px;
     margin-left: 0px;
     max-width: unset;
+	display: none;
 }
 }
 .ol-attribution a {
