@@ -1,3 +1,5 @@
+ol.proj.proj4.register(proj4);
+//ol.proj.get("EPSG:4326").setExtent([-139.131849, -105.490437, 157.582983, 84.371063]);
 var wms_layers = [];
 
 
@@ -14,7 +16,7 @@ var wms_layers = [];
         });
 var format_rf_data_1 = new ol.format.GeoJSON();
 var features_rf_data_1 = format_rf_data_1.readFeatures(json_rf_data_1, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_rf_data_1 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -29,7 +31,7 @@ var lyr_rf_data_1 = new ol.layer.Vector({
             });
 var format_Ownship_2 = new ol.format.GeoJSON();
 var features_Ownship_2 = format_Ownship_2.readFeatures(json_Ownship_2, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Ownship_2 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -44,7 +46,7 @@ var lyr_Ownship_2 = new ol.layer.Vector({
             });
 var format_ESM_EMITER_MPAC_3 = new ol.format.GeoJSON();
 var features_ESM_EMITER_MPAC_3 = format_ESM_EMITER_MPAC_3.readFeatures(json_ESM_EMITER_MPAC_3, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_ESM_EMITER_MPAC_3 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -59,7 +61,7 @@ var lyr_ESM_EMITER_MPAC_3 = new ol.layer.Vector({
             });
 var format_PirateAttacks20002022Dataworld_4 = new ol.format.GeoJSON();
 var features_PirateAttacks20002022Dataworld_4 = format_PirateAttacks20002022Dataworld_4.readFeatures(json_PirateAttacks20002022Dataworld_4, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_PirateAttacks20002022Dataworld_4 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -81,7 +83,7 @@ var lyr_PirateAttacks20002022Dataworld_4 = new ol.layer.Vector({
         });
 var format_VesselDetectionReportvakeai_5 = new ol.format.GeoJSON();
 var features_VesselDetectionReportvakeai_5 = format_VesselDetectionReportvakeai_5.readFeatures(json_VesselDetectionReportvakeai_5, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_VesselDetectionReportvakeai_5 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -100,7 +102,7 @@ var lyr_VesselDetectionReportvakeai_5 = new ol.layer.Vector({
         });
 var format_KSLPRIDERoutePathSearoutes_6 = new ol.format.GeoJSON();
 var features_KSLPRIDERoutePathSearoutes_6 = format_KSLPRIDERoutePathSearoutes_6.readFeatures(json_KSLPRIDERoutePathSearoutes_6, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_KSLPRIDERoutePathSearoutes_6 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -111,91 +113,44 @@ var lyr_KSLPRIDERoutePathSearoutes_6 = new ol.layer.Vector({
                 style: style_KSLPRIDERoutePathSearoutes_6,
                 popuplayertitle: "KSL PRIDE Route Path - Searoutes",
                 interactive: true,
-    title: 'KSL PRIDE Route Path - Searoutes<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_0.png" /> 1<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_1.png" /> 2<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_2.png" /> 3<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_3.png" /> 4<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_4.png" /> 5<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_5.png" /> 6<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_6.png" /> 7<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_7.png" /> 8<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_8.png" /> 9<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_9.png" /> 10<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_10.png" /> 11<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_11.png" /> 12<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_12.png" /> 13<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_13.png" /> 14<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_14.png" /> 15<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_15.png" /> 16<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_16.png" /> 17<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_17.png" /> 18<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_18.png" /> 19<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_19.png" /> 20<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_20.png" /> 21<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_21.png" /> 22<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_22.png" /> 23<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_23.png" /> 24<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_24.png" /> 25<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_25.png" /> 26<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_26.png" /> 27<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_27.png" /> 28<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_28.png" /> 29<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_29.png" /> 30<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_30.png" /> 31<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_31.png" /> 32<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_32.png" /> 33<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_33.png" /> 34<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_34.png" /> 35<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_35.png" /> 36<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_36.png" /> 37<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_37.png" /> 39<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_38.png" /> 40<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_39.png" /> 41<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_40.png" /> 42<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_41.png" /> 43<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_42.png" /> 44<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_43.png" /> 45<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_44.png" /> 46<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_45.png" /> 47<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_46.png" /> 48<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_47.png" /> 49<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_48.png" /> 50<br />\
-    <img src="styles/legend/KSLPRIDERoutePathSearoutes_6_49.png" /> <br />'
-        });
-var format_AISMarineTrafficSouthIndianOcean_7 = new ol.format.GeoJSON();
-var features_AISMarineTrafficSouthIndianOcean_7 = format_AISMarineTrafficSouthIndianOcean_7.readFeatures(json_AISMarineTrafficSouthIndianOcean_7, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_AISMarineTrafficSouthIndianOcean_7 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_AISMarineTrafficSouthIndianOcean_7.addFeatures(features_AISMarineTrafficSouthIndianOcean_7);
-var lyr_AISMarineTrafficSouthIndianOcean_7 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_AISMarineTrafficSouthIndianOcean_7, 
-                style: style_AISMarineTrafficSouthIndianOcean_7,
-                popuplayertitle: "AIS - Marine Traffic - South Indian Ocean",
-                interactive: true,
-                title: '<img src="styles/legend/AISMarineTrafficSouthIndianOcean_7.png" /> AIS - Marine Traffic - South Indian Ocean'
+                title: '<img src="styles/legend/KSLPRIDERoutePathSearoutes_6.png" /> KSL PRIDE Route Path - Searoutes'
             });
-var format_PortsNaturalEarthData_8 = new ol.format.GeoJSON();
-var features_PortsNaturalEarthData_8 = format_PortsNaturalEarthData_8.readFeatures(json_PortsNaturalEarthData_8, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_PortsNaturalEarthData_8 = new ol.source.Vector({
+var format_PortsNaturalEarthData_7 = new ol.format.GeoJSON();
+var features_PortsNaturalEarthData_7 = format_PortsNaturalEarthData_7.readFeatures(json_PortsNaturalEarthData_7, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_PortsNaturalEarthData_7 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_PortsNaturalEarthData_8.addFeatures(features_PortsNaturalEarthData_8);
-var lyr_PortsNaturalEarthData_8 = new ol.layer.Vector({
+jsonSource_PortsNaturalEarthData_7.addFeatures(features_PortsNaturalEarthData_7);cluster_PortsNaturalEarthData_7 = new ol.source.Cluster({
+  distance: 10,
+  source: jsonSource_PortsNaturalEarthData_7
+});
+var lyr_PortsNaturalEarthData_7 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_PortsNaturalEarthData_8, 
-                style: style_PortsNaturalEarthData_8,
+                source:cluster_PortsNaturalEarthData_7, 
+                style: style_PortsNaturalEarthData_7,
                 popuplayertitle: "Ports- Natural Earth Data",
                 interactive: true,
-                title: '<img src="styles/legend/PortsNaturalEarthData_8.png" /> Ports- Natural Earth Data'
+                title: '<img src="styles/legend/PortsNaturalEarthData_7.png" /> Ports- Natural Earth Data'
+            });
+var format_AISMarineTrafficSouthIndianOcean_8 = new ol.format.GeoJSON();
+var features_AISMarineTrafficSouthIndianOcean_8 = format_AISMarineTrafficSouthIndianOcean_8.readFeatures(json_AISMarineTrafficSouthIndianOcean_8, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_AISMarineTrafficSouthIndianOcean_8 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_AISMarineTrafficSouthIndianOcean_8.addFeatures(features_AISMarineTrafficSouthIndianOcean_8);
+var lyr_AISMarineTrafficSouthIndianOcean_8 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_AISMarineTrafficSouthIndianOcean_8, 
+                style: style_AISMarineTrafficSouthIndianOcean_8,
+                popuplayertitle: "AIS - Marine Traffic - South Indian Ocean",
+                interactive: true,
+                title: '<img src="styles/legend/AISMarineTrafficSouthIndianOcean_8.png" /> AIS - Marine Traffic - South Indian Ocean'
             });
 var format_Earthquakesusgsgov_9 = new ol.format.GeoJSON();
 var features_Earthquakesusgsgov_9 = format_Earthquakesusgsgov_9.readFeatures(json_Earthquakesusgsgov_9, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_Earthquakesusgsgov_9 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -210,7 +165,7 @@ var lyr_Earthquakesusgsgov_9 = new ol.layer.Vector({
             });
 var format_NoticestoMariners_10 = new ol.format.GeoJSON();
 var features_NoticestoMariners_10 = format_NoticestoMariners_10.readFeatures(json_NoticestoMariners_10, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_NoticestoMariners_10 = new ol.source.Vector({
     attributions: ' ',
 });
@@ -226,35 +181,35 @@ var lyr_NoticestoMariners_10 = new ol.layer.Vector({
     <img src="styles/legend/NoticestoMariners_10_1.png" />  FIRING PRACTICE<br />\
     <img src="styles/legend/NoticestoMariners_10_2.png" /> <br />'
         });
-var format_GEORSS26Aug24GoogleNews_11 = new ol.format.GeoJSON();
-var features_GEORSS26Aug24GoogleNews_11 = format_GEORSS26Aug24GoogleNews_11.readFeatures(json_GEORSS26Aug24GoogleNews_11, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_GEORSS26Aug24GoogleNews_11 = new ol.source.Vector({
+var format_FlightDataOpenskyNetwork_11 = new ol.format.GeoJSON();
+var features_FlightDataOpenskyNetwork_11 = format_FlightDataOpenskyNetwork_11.readFeatures(json_FlightDataOpenskyNetwork_11, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_FlightDataOpenskyNetwork_11 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_GEORSS26Aug24GoogleNews_11.addFeatures(features_GEORSS26Aug24GoogleNews_11);
-var lyr_GEORSS26Aug24GoogleNews_11 = new ol.layer.Vector({
+jsonSource_FlightDataOpenskyNetwork_11.addFeatures(features_FlightDataOpenskyNetwork_11);
+var lyr_FlightDataOpenskyNetwork_11 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_GEORSS26Aug24GoogleNews_11, 
-                style: style_GEORSS26Aug24GoogleNews_11,
-                popuplayertitle: "GEO RSS 26Aug24 - Google News",
-                interactive: true,
-                title: '<img src="styles/legend/GEORSS26Aug24GoogleNews_11.png" /> GEO RSS 26Aug24 - Google News'
-            });
-var format_FlightDataOpenskyNetwork_12 = new ol.format.GeoJSON();
-var features_FlightDataOpenskyNetwork_12 = format_FlightDataOpenskyNetwork_12.readFeatures(json_FlightDataOpenskyNetwork_12, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_FlightDataOpenskyNetwork_12 = new ol.source.Vector({
-    attributions: ' ',
-});
-jsonSource_FlightDataOpenskyNetwork_12.addFeatures(features_FlightDataOpenskyNetwork_12);
-var lyr_FlightDataOpenskyNetwork_12 = new ol.layer.Vector({
-                declutter: false,
-                source:jsonSource_FlightDataOpenskyNetwork_12, 
-                style: style_FlightDataOpenskyNetwork_12,
+                source:jsonSource_FlightDataOpenskyNetwork_11, 
+                style: style_FlightDataOpenskyNetwork_11,
                 popuplayertitle: "Flight Data - Opensky Network",
                 interactive: true,
-                title: '<img src="styles/legend/FlightDataOpenskyNetwork_12.png" /> Flight Data - Opensky Network'
+                title: '<img src="styles/legend/FlightDataOpenskyNetwork_11.png" /> Flight Data - Opensky Network'
+            });
+var format_GEORSS26Aug24GoogleNews_12 = new ol.format.GeoJSON();
+var features_GEORSS26Aug24GoogleNews_12 = format_GEORSS26Aug24GoogleNews_12.readFeatures(json_GEORSS26Aug24GoogleNews_12, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_GEORSS26Aug24GoogleNews_12 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_GEORSS26Aug24GoogleNews_12.addFeatures(features_GEORSS26Aug24GoogleNews_12);
+var lyr_GEORSS26Aug24GoogleNews_12 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_GEORSS26Aug24GoogleNews_12, 
+                style: style_GEORSS26Aug24GoogleNews_12,
+                popuplayertitle: "GEO RSS 26Aug24 - Google News",
+                interactive: true,
+                title: '<img src="styles/legend/GEORSS26Aug24GoogleNews_12.png" /> GEO RSS 26Aug24 - Google News'
             });
 var lyr_VizaqPortSatelliteImage_13 = new ol.layer.Image({
                             opacity: 1,
@@ -269,103 +224,129 @@ var lyr_VizaqPortSatelliteImage_13 = new ol.layer.Image({
                                 imageExtent: [9269695.937100, 2000851.278000, 9272767.937100, 2002899.278000]
                             })
                         });
-var format_MilitaryGrid_100_0_14 = new ol.format.GeoJSON();
-var features_MilitaryGrid_100_0_14 = format_MilitaryGrid_100_0_14.readFeatures(json_MilitaryGrid_100_0_14, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_MilitaryGrid_100_0_14 = new ol.source.Vector({
+var lyr_analysis_error_14 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "analysis_error",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/analysis_error_14.png",
+    attributions: ' ',
+                                projection: 'EPSG:4326',
+                                alwaysInRange: true,
+                                imageExtent: [47.200002, -49.299998, 179.800009, 30.650000]
+                            })
+                        });
+var lyr_analysed_sst_15 = new ol.layer.Image({
+                            opacity: 1,
+                            title: "analysed_sst",
+                            
+                            
+                            source: new ol.source.ImageStatic({
+                               url: "./layers/analysed_sst_15.png",
+    attributions: ' ',
+                                projection: 'EPSG:4326',
+                                alwaysInRange: true,
+                                imageExtent: [47.200002, -49.299998, 179.800009, 30.650000]
+                            })
+                        });
+var format_MilitaryGrid_100_0_16 = new ol.format.GeoJSON();
+var features_MilitaryGrid_100_0_16 = format_MilitaryGrid_100_0_16.readFeatures(json_MilitaryGrid_100_0_16, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_MilitaryGrid_100_0_16 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MilitaryGrid_100_0_14.addFeatures(features_MilitaryGrid_100_0_14);
-var lyr_MilitaryGrid_100_0_14 = new ol.layer.Vector({
+jsonSource_MilitaryGrid_100_0_16.addFeatures(features_MilitaryGrid_100_0_16);
+var lyr_MilitaryGrid_100_0_16 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MilitaryGrid_100_0_14, 
-                style: style_MilitaryGrid_100_0_14,
+                source:jsonSource_MilitaryGrid_100_0_16, 
+                style: style_MilitaryGrid_100_0_16,
                 popuplayertitle: "MilitaryGrid_100_0",
                 interactive: true,
-                title: '<img src="styles/legend/MilitaryGrid_100_0_14.png" /> MilitaryGrid_100_0'
+                title: '<img src="styles/legend/MilitaryGrid_100_0_16.png" /> MilitaryGrid_100_0'
             });
-var format_MilitaryGrid_15 = new ol.format.GeoJSON();
-var features_MilitaryGrid_15 = format_MilitaryGrid_15.readFeatures(json_MilitaryGrid_15, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_MilitaryGrid_15 = new ol.source.Vector({
+var format_MilitaryGrid_17 = new ol.format.GeoJSON();
+var features_MilitaryGrid_17 = format_MilitaryGrid_17.readFeatures(json_MilitaryGrid_17, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_MilitaryGrid_17 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_MilitaryGrid_15.addFeatures(features_MilitaryGrid_15);
-var lyr_MilitaryGrid_15 = new ol.layer.Vector({
+jsonSource_MilitaryGrid_17.addFeatures(features_MilitaryGrid_17);
+var lyr_MilitaryGrid_17 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_MilitaryGrid_15, 
-                style: style_MilitaryGrid_15,
+                source:jsonSource_MilitaryGrid_17, 
+                style: style_MilitaryGrid_17,
                 popuplayertitle: "MilitaryGrid",
                 interactive: true,
-                title: '<img src="styles/legend/MilitaryGrid_15.png" /> MilitaryGrid'
+                title: '<img src="styles/legend/MilitaryGrid_17.png" /> MilitaryGrid'
             });
-var format_EEZBoundariesv8MarineRegions_16 = new ol.format.GeoJSON();
-var features_EEZBoundariesv8MarineRegions_16 = format_EEZBoundariesv8MarineRegions_16.readFeatures(json_EEZBoundariesv8MarineRegions_16, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_EEZBoundariesv8MarineRegions_16 = new ol.source.Vector({
+var format_EEZBoundariesv8MarineRegions_18 = new ol.format.GeoJSON();
+var features_EEZBoundariesv8MarineRegions_18 = format_EEZBoundariesv8MarineRegions_18.readFeatures(json_EEZBoundariesv8MarineRegions_18, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_EEZBoundariesv8MarineRegions_18 = new ol.source.Vector({
     attributions: ' ',
 });
-jsonSource_EEZBoundariesv8MarineRegions_16.addFeatures(features_EEZBoundariesv8MarineRegions_16);
-var lyr_EEZBoundariesv8MarineRegions_16 = new ol.layer.Vector({
+jsonSource_EEZBoundariesv8MarineRegions_18.addFeatures(features_EEZBoundariesv8MarineRegions_18);
+var lyr_EEZBoundariesv8MarineRegions_18 = new ol.layer.Vector({
                 declutter: false,
-                source:jsonSource_EEZBoundariesv8MarineRegions_16, 
-                style: style_EEZBoundariesv8MarineRegions_16,
+                source:jsonSource_EEZBoundariesv8MarineRegions_18, 
+                style: style_EEZBoundariesv8MarineRegions_18,
                 popuplayertitle: "EEZ Boundaries v8 Marine Regions",
                 interactive: true,
-                title: '<img src="styles/legend/EEZBoundariesv8MarineRegions_16.png" /> EEZ Boundaries v8 Marine Regions'
+                title: '<img src="styles/legend/EEZBoundariesv8MarineRegions_18.png" /> EEZ Boundaries v8 Marine Regions'
             });
 var group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079 = new ol.layer.Group({
-                                layers: [],
+                                layers: [lyr_analysis_error_14,lyr_analysed_sst_15,],
                                 fold: "open",
                                 title: "METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2_1724506919079"});
 
-lyr_GoogleRoad_0.setVisible(true);lyr_rf_data_1.setVisible(true);lyr_Ownship_2.setVisible(true);lyr_ESM_EMITER_MPAC_3.setVisible(true);lyr_PirateAttacks20002022Dataworld_4.setVisible(true);lyr_VesselDetectionReportvakeai_5.setVisible(true);lyr_KSLPRIDERoutePathSearoutes_6.setVisible(true);lyr_AISMarineTrafficSouthIndianOcean_7.setVisible(true);lyr_PortsNaturalEarthData_8.setVisible(true);lyr_Earthquakesusgsgov_9.setVisible(true);lyr_NoticestoMariners_10.setVisible(true);lyr_GEORSS26Aug24GoogleNews_11.setVisible(true);lyr_FlightDataOpenskyNetwork_12.setVisible(true);lyr_VizaqPortSatelliteImage_13.setVisible(true);lyr_MilitaryGrid_100_0_14.setVisible(true);lyr_MilitaryGrid_15.setVisible(true);lyr_EEZBoundariesv8MarineRegions_16.setVisible(true);
-var layersList = [lyr_GoogleRoad_0,lyr_rf_data_1,lyr_Ownship_2,lyr_ESM_EMITER_MPAC_3,lyr_PirateAttacks20002022Dataworld_4,lyr_VesselDetectionReportvakeai_5,lyr_KSLPRIDERoutePathSearoutes_6,lyr_AISMarineTrafficSouthIndianOcean_7,lyr_PortsNaturalEarthData_8,lyr_Earthquakesusgsgov_9,lyr_NoticestoMariners_10,lyr_GEORSS26Aug24GoogleNews_11,lyr_FlightDataOpenskyNetwork_12,lyr_VizaqPortSatelliteImage_13,lyr_MilitaryGrid_100_0_14,lyr_MilitaryGrid_15,lyr_EEZBoundariesv8MarineRegions_16];
+lyr_GoogleRoad_0.setVisible(true);lyr_rf_data_1.setVisible(false);lyr_Ownship_2.setVisible(false);lyr_ESM_EMITER_MPAC_3.setVisible(false);lyr_PirateAttacks20002022Dataworld_4.setVisible(false);lyr_VesselDetectionReportvakeai_5.setVisible(false);lyr_KSLPRIDERoutePathSearoutes_6.setVisible(false);lyr_PortsNaturalEarthData_7.setVisible(false);lyr_AISMarineTrafficSouthIndianOcean_8.setVisible(false);lyr_Earthquakesusgsgov_9.setVisible(false);lyr_NoticestoMariners_10.setVisible(false);lyr_FlightDataOpenskyNetwork_11.setVisible(false);lyr_GEORSS26Aug24GoogleNews_12.setVisible(false);lyr_VizaqPortSatelliteImage_13.setVisible(false);lyr_analysis_error_14.setVisible(false);lyr_analysed_sst_15.setVisible(false);lyr_MilitaryGrid_100_0_16.setVisible(false);lyr_MilitaryGrid_17.setVisible(false);lyr_EEZBoundariesv8MarineRegions_18.setVisible(false);
+var layersList = [lyr_GoogleRoad_0,lyr_rf_data_1,lyr_Ownship_2,lyr_ESM_EMITER_MPAC_3,lyr_PirateAttacks20002022Dataworld_4,lyr_VesselDetectionReportvakeai_5,lyr_KSLPRIDERoutePathSearoutes_6,lyr_PortsNaturalEarthData_7,lyr_AISMarineTrafficSouthIndianOcean_8,lyr_Earthquakesusgsgov_9,lyr_NoticestoMariners_10,lyr_FlightDataOpenskyNetwork_11,lyr_GEORSS26Aug24GoogleNews_12,lyr_VizaqPortSatelliteImage_13,group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079,lyr_MilitaryGrid_100_0_16,lyr_MilitaryGrid_17,lyr_EEZBoundariesv8MarineRegions_18];
 lyr_rf_data_1.set('fieldAliases', {'Timestamp': 'Timestamp', 'Frequency': 'Frequency', 'Signal Strength': 'Signal Strength', 'Modulation': 'Modulation', 'Bandwidth': 'Bandwidth', 'Location': 'Location', 'lat': 'lat', 'lon': 'lon', 'Device Type': 'Device Type', 'Antenna Type': 'Antenna Type', 'Temperature': 'Temperature', 'Humidity': 'Humidity', 'Wind Speed': 'Wind Speed', 'Precipitation': 'Precipitation', 'Weather Condition': 'Weather Condition', 'Interference Type': 'Interference Type', 'Battery Level': 'Battery Level', 'Power Source': 'Power Source', 'CPU Usage': 'CPU Usage', 'Memory Usage': 'Memory Usage', 'WiFi Strength': 'WiFi Strength', 'Disk Usage': 'Disk Usage', 'System Load': 'System Load', 'Altitude(m)': 'Altitude(m)', 'Air Pressure': 'Air Pressure', 'Device Status': 'Device Status', 'I/Q Data': 'I/Q Data', });
 lyr_Ownship_2.set('fieldAliases', {'imo': 'imo', 'Msg Date YYYYMMDD': 'Msg Date YYYYMMDD', 'Msg Time hh:mm:ss.sss': 'Msg Time hh:mm:ss.sss', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Altitude MSL Feet': 'Altitude MSL Feet', 'Heading True Deg': 'Heading True Deg', 'Position Date YYYYMMDD': 'Position Date YYYYMMDD', 'Position Time hh:mm:ss.sss': 'Position Time hh:mm:ss.sss', 'Ground Speed Kts': 'Ground Speed Kts', });
 lyr_ESM_EMITER_MPAC_3.set('fieldAliases', {'field_1': 'field_1', 'Date YYYYMMDD': 'Date YYYYMMDD', 'Time hh:mm:ss.sss': 'Time hh:mm:ss.sss', 'Emitter Enumeration': 'Emitter Enumeration', 'Strongest Beam Enumeration': 'Strongest Beam Enumeration', 'Change Type': 'Change Type', 'Manually Assigned Emitter': 'Manually Assigned Emitter', 'Azimuth Deg': 'Azimuth Deg', 'Emitter Intercept Date YYYYMMDD': 'Emitter Intercept Date YYYYMMDD', 'Emitter Intercept Time hh:mm:ss.sss': 'Emitter Intercept Time hh:mm:ss.sss', 'Active Status': 'Active Status', 'Affiliation': 'Affiliation', 'Evironment': 'Evironment', 'Associated Weapon System': 'Associated Weapon System', 'Associated Target': 'Associated Target', 'Priority': 'Priority', 'Confidence': 'Confidence', 'Range Nm': 'Range Nm', 'Azimuth Type': 'Azimuth Type', 'Ownship Latitude': 'Ownship Latitude', 'Ownship Longitude': 'Ownship Longitude', 'Ownship Altitude Feet': 'Ownship Altitude Feet', 'Azimuth Accuracy Deg': 'Azimuth Accuracy Deg', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Emitter Classification Status': 'Emitter Classification Status', 'Emitter of Interest': 'Emitter of Interest', 'Unnamed: 26': 'Unnamed: 26', 'imo': 'imo', });
 lyr_PirateAttacks20002022Dataworld_4.set('fieldAliases', {'incident_date': 'incident_date', 'ship_name': 'ship_name', 'ship_flag': 'ship_flag', 'ship_type': 'ship_type', 'area': 'area', 'latitude': 'latitude', 'longitude': 'longitude', 'consequences_to_crew': 'consequences_to_crew', 'part_of_ship_raided': 'part_of_ship_raided', 'ship_status': 'ship_status', 'weapons_used': 'weapons_used', 'flag_crew_injuries': 'flag_crew_injuries', 'flag_crew_held_hostage': 'flag_crew_held_hostage', 'flag_crew_missing': 'flag_crew_missing', 'flag_crew_deaths': 'flag_crew_deaths', 'flag_crew_assaulted': 'flag_crew_assaulted', 'location': 'location', });
-lyr_VesselDetectionReportvakeai_5.set('fieldAliases', {'uuid': 'uuid', 'timestamp': 'timestamp', 'correlated': 'correlated', 'object_class': 'object_class', 'matching_label': 'matching_label', 'length': 'length', 'lon': 'lon', 'lat': 'lat', 'object_class_score': 'object_class_score', 'estimation_score': 'estimation_score', 'matching_score': 'matching_score', 'image_path': 'image_path', 'image_source': 'image_source', 'course': 'course', 'mmsi': 'mmsi', });
+lyr_VesselDetectionReportvakeai_5.set('fieldAliases', {'uuid': 'uuid', 'timestamp': 'timestamp', 'correlated': 'correlated', 'object_class': 'object_class', 'matching_label': 'matching_label', 'length': 'length', 'lon': 'lon', 'lat': 'lat', 'object_class_score': 'object_class_score', 'estimation_score': 'estimation_score', 'matching_score': 'matching_score', 'image_path': 'image_path', 'image_source': 'image_source', 'course': 'course', 'mmsi': 'mmsi', 'URL': 'URL', });
 lyr_KSLPRIDERoutePathSearoutes_6.set('fieldAliases', {'draft': 'draft', 'width': 'width', 'length': 'length', 'name': 'name', 'imo': 'imo', 'speedInKts': 'speedInKts', 'speed': 'speed', 'duration': 'duration', 'departure': 'departure', 'Longitude': 'Longitude', 'Latitude': 'Latitude', 'New_DT': 'New_DT', });
-lyr_AISMarineTrafficSouthIndianOcean_7.set('fieldAliases', {'data.SHIP_ID': 'data.SHIP_ID', 'data.IMO': 'data.IMO', 'data.MMSI': 'data.MMSI', 'data.CALLSIGN': 'data.CALLSIGN', 'data.SHIPNAME': 'data.SHIPNAME', 'data.TYPE_COLOR': 'data.TYPE_COLOR', 'data.LAST_POS': 'data.LAST_POS', 'data.CODE2': 'data.CODE2', 'data.COUNTRY': 'data.COUNTRY', 'data.NEXT_PORT_NAME': 'data.NEXT_PORT_NAME', 'data.NEXT_PORT_COUNTRY': 'data.NEXT_PORT_COUNTRY', 'data.NEXT_PORT_ID': 'data.NEXT_PORT_ID', 'data.ETA': 'data.ETA', 'data.DESTINATION': 'data.DESTINATION', 'data.CURRENT_PORT_COUNTRY': 'data.CURRENT_PORT_COUNTRY', 'data.TYPE_SUMMARY': 'data.TYPE_SUMMARY', 'data.COURSE': 'data.COURSE', 'data.LON': 'data.LON', 'data.LAT': 'data.LAT', 'data.TIMEZONE': 'data.TIMEZONE', 'data.AREA_CODE': 'data.AREA_CODE', 'data.ETA_OFFSET': 'data.ETA_OFFSET', 'data.SPEED': 'data.SPEED', 'data.LENGTH': 'data.LENGTH', 'data.WIDTH': 'data.WIDTH', 'data.ETA_UPDATED': 'data.ETA_UPDATED', 'data.DISTANCE_TO_GO': 'data.DISTANCE_TO_GO', 'data.PORT_ID': 'data.PORT_ID', 'data.CURRENT_PORT': 'data.CURRENT_PORT', 'data.CTA_ROUTE_FORECAST': 'data.CTA_ROUTE_FORECAST', });
-lyr_PortsNaturalEarthData_8.set('fieldAliases', {'scalerank': 'scalerank', 'featurecla': 'featurecla', 'name': 'name', 'website': 'website', 'natlscale': 'natlscale', 'ne_id': 'ne_id', });
+lyr_PortsNaturalEarthData_7.set('fieldAliases', {'scalerank': 'scalerank', 'featurecla': 'featurecla', 'name': 'name', 'website': 'website', 'natlscale': 'natlscale', 'ne_id': 'ne_id', });
+lyr_AISMarineTrafficSouthIndianOcean_8.set('fieldAliases', {'SHIP_ID': 'SHIP_ID', 'IMO': 'IMO', 'MMSI': 'MMSI', 'CALLSIGN': 'CALLSIGN', 'SHIPNAME': 'SHIPNAME', 'TYPE_COLOR': 'TYPE_COLOR', 'LAST_POS': 'LAST_POS', 'CODE2': 'CODE2', 'COUNTRY': 'COUNTRY', 'NEXT_PORT_NAME': 'NEXT_PORT_NAME', 'NEXT_PORT_COUNTRY': 'NEXT_PORT_COUNTRY', 'NEXT_PORT_ID': 'NEXT_PORT_ID', 'ETA': 'ETA', 'DESTINATION': 'DESTINATION', 'CURRENT_PORT_COUNTRY': 'CURRENT_PORT_COUNTRY', 'TYPE_SUMMARY': 'TYPE_SUMMARY', 'COURSE': 'COURSE', 'LON': 'LON', 'LAT': 'LAT', 'TIMEZONE': 'TIMEZONE', 'AREA_CODE': 'AREA_CODE', 'ETA_OFFSET': 'ETA_OFFSET', 'SPEED': 'SPEED', 'LENGTH': 'LENGTH', 'WIDTH': 'WIDTH', 'ETA_UPDATED': 'ETA_UPDATED', 'DISTANCE_TO_GO': 'DISTANCE_TO_GO', 'PORT_ID': 'PORT_ID', 'CURRENT_PORT': 'CURRENT_PORT', 'CTA_ROUTE_FORECAST': 'CTA_ROUTE_FORECAST', });
 lyr_Earthquakesusgsgov_9.set('fieldAliases', {'id': 'id', 'title': 'title', 'updated': 'updated', 'link_rel': 'link_rel', 'link_type': 'link_type', 'link_href': 'link_href', 'summary': 'summary', 'summary_type': 'summary_type', 'georss_elev': 'georss_elev', 'category_label': 'category_label', 'category_term': 'category_term', 'category2_label': 'category2_label', 'category2_term': 'category2_term', 'category3_label': 'category3_label', 'category3_term': 'category3_term', 'category4_label': 'category4_label', 'category4_term': 'category4_term', });
 lyr_NoticestoMariners_10.set('fieldAliases', {'NOTICEID': 'NOTICEID', 'COUNTRY': 'COUNTRY', 'DATE': 'DATE', 'LAT': 'LAT', 'LONG': 'LONG', 'TYPE': 'TYPE', 'IMO': 'IMO', 'DESCRIPTION': 'DESCRIPTION', 'field_9': 'field_9', });
-lyr_GEORSS26Aug24GoogleNews_11.set('fieldAliases', {'channel__item__title': 'channel__item__title', 'channel__item__link': 'channel__item__link', 'channel__item__description__a__@href': 'channel__item__description__a__@href', 'channel__item__description__a__@target': 'channel__item__description__a__@target', 'channel__item__description__a__#text': 'channel__item__description__a__#text', 'channel__item__description__#text': 'channel__item__description__#text', 'channel__item__description__font__@color': 'channel__item__description__font__@color', 'channel__item__description__font__#text': 'channel__item__description__font__#text', 'channel__item__pubDate': 'channel__item__pubDate', 'channel__item__guid__@isPermaLink': 'channel__item__guid__@isPermaLink', 'channel__item__guid__#text': 'channel__item__guid__#text', 'channel__item__dc:date': 'channel__item__dc:date', 'channel__item__geo:lat': 'channel__item__geo:lat', 'channel__item__geo:long': 'channel__item__geo:long', });
-lyr_FlightDataOpenskyNetwork_12.set('fieldAliases', {'icao24': 'icao24', 'callsign': 'callsign', 'origin_country': 'origin_country', 'time_position': 'time_position', 'last_contact': 'last_contact', 'long': 'long', 'lat': 'lat', 'baro_altitude': 'baro_altitude', 'on_ground': 'on_ground', 'velocity': 'velocity', 'true_track': 'true_track', 'vertical_rate': 'vertical_rate', 'sensors': 'sensors', 'geo_altitude': 'geo_altitude', 'squawk': 'squawk', 'spi': 'spi', 'position_source': 'position_source', });
-lyr_MilitaryGrid_100_0_14.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', 'MGRS': 'MGRS', });
-lyr_MilitaryGrid_15.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', });
-lyr_EEZBoundariesv8MarineRegions_16.set('fieldAliases', {'Source': 'Source', 'TYPE': 'TYPE', 'Boundary': 'Boundary', 'Country1': 'Country1', 'Country2': 'Country2', 'line_id': 'line_id', 'TreatyDate': 'TreatyDate', 'LastChange': 'LastChange', });
-lyr_rf_data_1.set('fieldImages', {'Timestamp': 'TextEdit', 'Frequency': 'Range', 'Signal Strength': 'Range', 'Modulation': 'TextEdit', 'Bandwidth': 'Range', 'Location': 'TextEdit', 'lat': 'TextEdit', 'lon': 'TextEdit', 'Device Type': 'TextEdit', 'Antenna Type': 'TextEdit', 'Temperature': 'Range', 'Humidity': 'Range', 'Wind Speed': 'Range', 'Precipitation': 'TextEdit', 'Weather Condition': 'TextEdit', 'Interference Type': 'TextEdit', 'Battery Level': 'Range', 'Power Source': 'CheckBox', 'CPU Usage': 'TextEdit', 'Memory Usage': 'TextEdit', 'WiFi Strength': 'Range', 'Disk Usage': 'TextEdit', 'System Load': 'TextEdit', 'Altitude(m)': 'TextEdit', 'Air Pressure': 'TextEdit', 'Device Status': 'TextEdit', 'I/Q Data': 'TextEdit', });
+lyr_FlightDataOpenskyNetwork_11.set('fieldAliases', {'icao24': 'icao24', 'callsign': 'callsign', 'origin_country': 'origin_country', 'time_position': 'time_position', 'last_contact': 'last_contact', 'long': 'long', 'lat': 'lat', 'baro_altitude': 'baro_altitude', 'on_ground': 'on_ground', 'velocity': 'velocity', 'true_track': 'true_track', 'vertical_rate': 'vertical_rate', 'sensors': 'sensors', 'geo_altitude': 'geo_altitude', 'squawk': 'squawk', 'spi': 'spi', 'position_source': 'position_source', });
+lyr_GEORSS26Aug24GoogleNews_12.set('fieldAliases', {'Title': 'Title', 'Link': 'Link', 'Target': 'Target', 'Description': 'Description', 'Channel': 'Channel', 'PublishDate': 'PublishDate', 'lat': 'lat', 'long': 'long', });
+lyr_MilitaryGrid_100_0_16.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', 'MGRS': 'MGRS', });
+lyr_MilitaryGrid_17.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', });
+lyr_EEZBoundariesv8MarineRegions_18.set('fieldAliases', {'Source': 'Source', 'TYPE': 'TYPE', 'Boundary': 'Boundary', 'Country1': 'Country1', 'Country2': 'Country2', 'line_id': 'line_id', 'TreatyDate': 'TreatyDate', 'LastChange': 'LastChange', });
+lyr_rf_data_1.set('fieldImages', {'Timestamp': 'TextEdit', 'Frequency': 'Hidden', 'Signal Strength': 'Hidden', 'Modulation': 'Hidden', 'Bandwidth': 'Hidden', 'Location': 'TextEdit', 'lat': 'TextEdit', 'lon': 'TextEdit', 'Device Type': 'TextEdit', 'Antenna Type': 'TextEdit', 'Temperature': 'Range', 'Humidity': 'Range', 'Wind Speed': 'Range', 'Precipitation': 'Hidden', 'Weather Condition': 'TextEdit', 'Interference Type': 'TextEdit', 'Battery Level': 'Hidden', 'Power Source': 'Hidden', 'CPU Usage': 'Hidden', 'Memory Usage': 'Hidden', 'WiFi Strength': 'Range', 'Disk Usage': 'Hidden', 'System Load': 'Hidden', 'Altitude(m)': 'TextEdit', 'Air Pressure': 'Hidden', 'Device Status': 'TextEdit', 'I/Q Data': 'Hidden', });
 lyr_Ownship_2.set('fieldImages', {'imo': 'Range', 'Msg Date YYYYMMDD': 'Range', 'Msg Time hh:mm:ss.sss': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Altitude MSL Feet': 'Range', 'Heading True Deg': 'TextEdit', 'Position Date YYYYMMDD': 'Range', 'Position Time hh:mm:ss.sss': 'TextEdit', 'Ground Speed Kts': 'TextEdit', });
-lyr_ESM_EMITER_MPAC_3.set('fieldImages', {'field_1': 'Range', 'Date YYYYMMDD': 'Range', 'Time hh:mm:ss.sss': 'TextEdit', 'Emitter Enumeration': 'Range', 'Strongest Beam Enumeration': 'Range', 'Change Type': 'TextEdit', 'Manually Assigned Emitter': 'CheckBox', 'Azimuth Deg': 'TextEdit', 'Emitter Intercept Date YYYYMMDD': 'Range', 'Emitter Intercept Time hh:mm:ss.sss': 'TextEdit', 'Active Status': 'CheckBox', 'Affiliation': 'TextEdit', 'Evironment': 'TextEdit', 'Associated Weapon System': 'Range', 'Associated Target': 'Range', 'Priority': 'TextEdit', 'Confidence': 'TextEdit', 'Range Nm': 'CheckBox', 'Azimuth Type': 'TextEdit', 'Ownship Latitude': 'TextEdit', 'Ownship Longitude': 'TextEdit', 'Ownship Altitude Feet': 'Range', 'Azimuth Accuracy Deg': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Emitter Classification Status': 'TextEdit', 'Emitter of Interest': 'CheckBox', 'Unnamed: 26': 'TextEdit', 'imo': 'Range', });
-lyr_PirateAttacks20002022Dataworld_4.set('fieldImages', {'incident_date': 'DateTime', 'ship_name': 'TextEdit', 'ship_flag': 'TextEdit', 'ship_type': 'TextEdit', 'area': 'TextEdit', 'latitude': 'TextEdit', 'longitude': 'TextEdit', 'consequences_to_crew': 'TextEdit', 'part_of_ship_raided': 'TextEdit', 'ship_status': 'TextEdit', 'weapons_used': 'TextEdit', 'flag_crew_injuries': 'CheckBox', 'flag_crew_held_hostage': 'CheckBox', 'flag_crew_missing': 'CheckBox', 'flag_crew_deaths': 'CheckBox', 'flag_crew_assaulted': 'CheckBox', 'location': 'TextEdit', });
-lyr_VesselDetectionReportvakeai_5.set('fieldImages', {'uuid': 'TextEdit', 'timestamp': 'DateTime', 'correlated': 'CheckBox', 'object_class': 'TextEdit', 'matching_label': 'TextEdit', 'length': 'TextEdit', 'lon': 'TextEdit', 'lat': 'TextEdit', 'object_class_score': 'TextEdit', 'estimation_score': 'TextEdit', 'matching_score': 'TextEdit', 'image_path': 'TextEdit', 'image_source': 'TextEdit', 'course': 'TextEdit', 'mmsi': 'TextEdit', });
-lyr_KSLPRIDERoutePathSearoutes_6.set('fieldImages', {'draft': 'TextEdit', 'width': 'Range', 'length': 'Range', 'name': 'TextEdit', 'imo': 'Range', 'speedInKts': 'Range', 'speed': 'Range', 'duration': 'Range', 'departure': 'TextEdit', 'Longitude': 'TextEdit', 'Latitude': 'TextEdit', 'New_DT': 'DateTime', });
-lyr_AISMarineTrafficSouthIndianOcean_7.set('fieldImages', {'data.SHIP_ID': 'Range', 'data.IMO': 'Range', 'data.MMSI': 'Range', 'data.CALLSIGN': 'TextEdit', 'data.SHIPNAME': 'TextEdit', 'data.TYPE_COLOR': 'TextEdit', 'data.LAST_POS': 'Range', 'data.CODE2': 'TextEdit', 'data.COUNTRY': 'TextEdit', 'data.NEXT_PORT_NAME': 'TextEdit', 'data.NEXT_PORT_COUNTRY': 'TextEdit', 'data.NEXT_PORT_ID': 'TextEdit', 'data.ETA': 'TextEdit', 'data.DESTINATION': 'TextEdit', 'data.CURRENT_PORT_COUNTRY': 'TextEdit', 'data.TYPE_SUMMARY': 'TextEdit', 'data.COURSE': 'TextEdit', 'data.LON': 'TextEdit', 'data.LAT': 'TextEdit', 'data.TIMEZONE': 'TextEdit', 'data.AREA_CODE': 'TextEdit', 'data.ETA_OFFSET': 'TextEdit', 'data.SPEED': 'TextEdit', 'data.LENGTH': 'TextEdit', 'data.WIDTH': 'TextEdit', 'data.ETA_UPDATED': 'TextEdit', 'data.DISTANCE_TO_GO': 'Range', 'data.PORT_ID': 'TextEdit', 'data.CURRENT_PORT': 'TextEdit', 'data.CTA_ROUTE_FORECAST': 'CheckBox', });
-lyr_PortsNaturalEarthData_8.set('fieldImages', {'scalerank': 'Range', 'featurecla': 'TextEdit', 'name': 'TextEdit', 'website': 'TextEdit', 'natlscale': 'TextEdit', 'ne_id': 'TextEdit', });
-lyr_Earthquakesusgsgov_9.set('fieldImages', {'id': 'TextEdit', 'title': 'TextEdit', 'updated': 'DateTime', 'link_rel': 'TextEdit', 'link_type': 'TextEdit', 'link_href': 'TextEdit', 'summary': 'TextEdit', 'summary_type': 'TextEdit', 'georss_elev': 'TextEdit', 'category_label': 'TextEdit', 'category_term': 'TextEdit', 'category2_label': 'TextEdit', 'category2_term': 'TextEdit', 'category3_label': 'TextEdit', 'category3_term': 'TextEdit', 'category4_label': 'TextEdit', 'category4_term': 'TextEdit', });
-lyr_NoticestoMariners_10.set('fieldImages', {'NOTICEID': 'TextEdit', 'COUNTRY': 'TextEdit', 'DATE': 'TextEdit', 'LAT': 'TextEdit', 'LONG': 'TextEdit', 'TYPE': 'TextEdit', 'IMO': 'TextEdit', 'DESCRIPTION': 'TextEdit', 'field_9': 'TextEdit', });
-lyr_GEORSS26Aug24GoogleNews_11.set('fieldImages', {'channel__item__title': 'TextEdit', 'channel__item__link': 'TextEdit', 'channel__item__description__a__@href': 'TextEdit', 'channel__item__description__a__@target': 'TextEdit', 'channel__item__description__a__#text': 'TextEdit', 'channel__item__description__#text': 'TextEdit', 'channel__item__description__font__@color': 'TextEdit', 'channel__item__description__font__#text': 'TextEdit', 'channel__item__pubDate': 'TextEdit', 'channel__item__guid__@isPermaLink': 'CheckBox', 'channel__item__guid__#text': 'TextEdit', 'channel__item__dc:date': 'DateTime', 'channel__item__geo:lat': 'TextEdit', 'channel__item__geo:long': 'TextEdit', });
-lyr_FlightDataOpenskyNetwork_12.set('fieldImages', {'icao24': 'TextEdit', 'callsign': 'TextEdit', 'origin_country': 'TextEdit', 'time_position': 'Range', 'last_contact': 'Range', 'long': 'TextEdit', 'lat': 'TextEdit', 'baro_altitude': 'TextEdit', 'on_ground': 'CheckBox', 'velocity': 'TextEdit', 'true_track': 'TextEdit', 'vertical_rate': 'TextEdit', 'sensors': 'TextEdit', 'geo_altitude': 'TextEdit', 'squawk': 'Range', 'spi': 'CheckBox', 'position_source': 'CheckBox', });
-lyr_MilitaryGrid_100_0_14.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', 'MGRS': 'TextEdit', });
-lyr_MilitaryGrid_15.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', });
-lyr_EEZBoundariesv8MarineRegions_16.set('fieldImages', {'Source': 'TextEdit', 'TYPE': 'TextEdit', 'Boundary': 'TextEdit', 'Country1': 'Range', 'Country2': 'Range', 'line_id': 'Range', 'TreatyDate': 'TextEdit', 'LastChange': 'TextEdit', });
-lyr_rf_data_1.set('fieldLabels', {'Timestamp': 'no label', 'Frequency': 'no label', 'Signal Strength': 'no label', 'Modulation': 'no label', 'Bandwidth': 'no label', 'Location': 'no label', 'lat': 'no label', 'lon': 'no label', 'Device Type': 'no label', 'Antenna Type': 'no label', 'Temperature': 'no label', 'Humidity': 'no label', 'Wind Speed': 'no label', 'Precipitation': 'no label', 'Weather Condition': 'no label', 'Interference Type': 'no label', 'Battery Level': 'no label', 'Power Source': 'no label', 'CPU Usage': 'no label', 'Memory Usage': 'no label', 'WiFi Strength': 'no label', 'Disk Usage': 'no label', 'System Load': 'no label', 'Altitude(m)': 'no label', 'Air Pressure': 'no label', 'Device Status': 'no label', 'I/Q Data': 'no label', });
-lyr_Ownship_2.set('fieldLabels', {'imo': 'no label', 'Msg Date YYYYMMDD': 'no label', 'Msg Time hh:mm:ss.sss': 'no label', 'Latitude': 'no label', 'Longitude': 'no label', 'Altitude MSL Feet': 'no label', 'Heading True Deg': 'no label', 'Position Date YYYYMMDD': 'no label', 'Position Time hh:mm:ss.sss': 'no label', 'Ground Speed Kts': 'no label', });
-lyr_ESM_EMITER_MPAC_3.set('fieldLabels', {'field_1': 'no label', 'Date YYYYMMDD': 'no label', 'Time hh:mm:ss.sss': 'no label', 'Emitter Enumeration': 'no label', 'Strongest Beam Enumeration': 'no label', 'Change Type': 'no label', 'Manually Assigned Emitter': 'no label', 'Azimuth Deg': 'no label', 'Emitter Intercept Date YYYYMMDD': 'no label', 'Emitter Intercept Time hh:mm:ss.sss': 'no label', 'Active Status': 'no label', 'Affiliation': 'no label', 'Evironment': 'no label', 'Associated Weapon System': 'no label', 'Associated Target': 'no label', 'Priority': 'no label', 'Confidence': 'no label', 'Range Nm': 'no label', 'Azimuth Type': 'no label', 'Ownship Latitude': 'no label', 'Ownship Longitude': 'no label', 'Ownship Altitude Feet': 'no label', 'Azimuth Accuracy Deg': 'no label', 'Latitude': 'no label', 'Longitude': 'no label', 'Emitter Classification Status': 'no label', 'Emitter of Interest': 'no label', 'Unnamed: 26': 'no label', 'imo': 'no label', });
-lyr_PirateAttacks20002022Dataworld_4.set('fieldLabels', {'incident_date': 'no label', 'ship_name': 'no label', 'ship_flag': 'no label', 'ship_type': 'no label', 'area': 'no label', 'latitude': 'no label', 'longitude': 'no label', 'consequences_to_crew': 'no label', 'part_of_ship_raided': 'no label', 'ship_status': 'no label', 'weapons_used': 'no label', 'flag_crew_injuries': 'no label', 'flag_crew_held_hostage': 'no label', 'flag_crew_missing': 'no label', 'flag_crew_deaths': 'no label', 'flag_crew_assaulted': 'no label', 'location': 'no label', });
-lyr_VesselDetectionReportvakeai_5.set('fieldLabels', {'uuid': 'no label', 'timestamp': 'no label', 'correlated': 'no label', 'object_class': 'no label', 'matching_label': 'no label', 'length': 'no label', 'lon': 'no label', 'lat': 'no label', 'object_class_score': 'no label', 'estimation_score': 'no label', 'matching_score': 'no label', 'image_path': 'no label', 'image_source': 'no label', 'course': 'no label', 'mmsi': 'no label', });
-lyr_KSLPRIDERoutePathSearoutes_6.set('fieldLabels', {'draft': 'no label', 'width': 'no label', 'length': 'no label', 'name': 'no label', 'imo': 'no label', 'speedInKts': 'no label', 'speed': 'no label', 'duration': 'no label', 'departure': 'no label', 'Longitude': 'no label', 'Latitude': 'no label', 'New_DT': 'no label', });
-lyr_AISMarineTrafficSouthIndianOcean_7.set('fieldLabels', {'data.SHIP_ID': 'no label', 'data.IMO': 'no label', 'data.MMSI': 'no label', 'data.CALLSIGN': 'no label', 'data.SHIPNAME': 'no label', 'data.TYPE_COLOR': 'no label', 'data.LAST_POS': 'no label', 'data.CODE2': 'no label', 'data.COUNTRY': 'no label', 'data.NEXT_PORT_NAME': 'no label', 'data.NEXT_PORT_COUNTRY': 'no label', 'data.NEXT_PORT_ID': 'no label', 'data.ETA': 'no label', 'data.DESTINATION': 'no label', 'data.CURRENT_PORT_COUNTRY': 'no label', 'data.TYPE_SUMMARY': 'no label', 'data.COURSE': 'no label', 'data.LON': 'no label', 'data.LAT': 'no label', 'data.TIMEZONE': 'no label', 'data.AREA_CODE': 'no label', 'data.ETA_OFFSET': 'no label', 'data.SPEED': 'no label', 'data.LENGTH': 'no label', 'data.WIDTH': 'no label', 'data.ETA_UPDATED': 'no label', 'data.DISTANCE_TO_GO': 'no label', 'data.PORT_ID': 'no label', 'data.CURRENT_PORT': 'no label', 'data.CTA_ROUTE_FORECAST': 'no label', });
-lyr_PortsNaturalEarthData_8.set('fieldLabels', {'scalerank': 'no label', 'featurecla': 'no label', 'name': 'no label', 'website': 'no label', 'natlscale': 'no label', 'ne_id': 'no label', });
-lyr_Earthquakesusgsgov_9.set('fieldLabels', {'id': 'no label', 'title': 'no label', 'updated': 'no label', 'link_rel': 'no label', 'link_type': 'no label', 'link_href': 'no label', 'summary': 'no label', 'summary_type': 'no label', 'georss_elev': 'no label', 'category_label': 'no label', 'category_term': 'no label', 'category2_label': 'no label', 'category2_term': 'no label', 'category3_label': 'no label', 'category3_term': 'no label', 'category4_label': 'no label', 'category4_term': 'no label', });
-lyr_NoticestoMariners_10.set('fieldLabels', {'NOTICEID': 'no label', 'COUNTRY': 'no label', 'DATE': 'no label', 'LAT': 'no label', 'LONG': 'no label', 'TYPE': 'no label', 'IMO': 'no label', 'DESCRIPTION': 'no label', 'field_9': 'no label', });
-lyr_GEORSS26Aug24GoogleNews_11.set('fieldLabels', {'channel__item__title': 'no label', 'channel__item__link': 'no label', 'channel__item__description__a__@href': 'no label', 'channel__item__description__a__@target': 'no label', 'channel__item__description__a__#text': 'no label', 'channel__item__description__#text': 'no label', 'channel__item__description__font__@color': 'no label', 'channel__item__description__font__#text': 'no label', 'channel__item__pubDate': 'no label', 'channel__item__guid__@isPermaLink': 'no label', 'channel__item__guid__#text': 'no label', 'channel__item__dc:date': 'no label', 'channel__item__geo:lat': 'no label', 'channel__item__geo:long': 'no label', });
-lyr_FlightDataOpenskyNetwork_12.set('fieldLabels', {'icao24': 'no label', 'callsign': 'no label', 'origin_country': 'no label', 'time_position': 'no label', 'last_contact': 'no label', 'long': 'no label', 'lat': 'no label', 'baro_altitude': 'no label', 'on_ground': 'no label', 'velocity': 'no label', 'true_track': 'no label', 'vertical_rate': 'no label', 'sensors': 'no label', 'geo_altitude': 'no label', 'squawk': 'no label', 'spi': 'no label', 'position_source': 'no label', });
-lyr_MilitaryGrid_100_0_14.set('fieldLabels', {'fid': 'no label', 'row_index': 'no label', 'col_index': 'no label', 'GZD': 'no label', 'MGRS': 'no label', });
-lyr_MilitaryGrid_15.set('fieldLabels', {'fid': 'no label', 'row_index': 'no label', 'col_index': 'no label', 'GZD': 'no label', });
-lyr_EEZBoundariesv8MarineRegions_16.set('fieldLabels', {'Source': 'no label', 'TYPE': 'no label', 'Boundary': 'no label', 'Country1': 'no label', 'Country2': 'no label', 'line_id': 'no label', 'TreatyDate': 'no label', 'LastChange': 'no label', });
-lyr_EEZBoundariesv8MarineRegions_16.on('precompose', function(evt) {
+lyr_ESM_EMITER_MPAC_3.set('fieldImages', {'field_1': 'Hidden', 'Date YYYYMMDD': 'TextEdit', 'Time hh:mm:ss.sss': 'TextEdit', 'Emitter Enumeration': 'Hidden', 'Strongest Beam Enumeration': 'Hidden', 'Change Type': 'Hidden', 'Manually Assigned Emitter': 'Hidden', 'Azimuth Deg': 'Hidden', 'Emitter Intercept Date YYYYMMDD': 'Hidden', 'Emitter Intercept Time hh:mm:ss.sss': 'TextEdit', 'Active Status': 'CheckBox', 'Affiliation': 'TextEdit', 'Evironment': 'Hidden', 'Associated Weapon System': 'Hidden', 'Associated Target': 'Hidden', 'Priority': 'Hidden', 'Confidence': 'Hidden', 'Range Nm': 'Hidden', 'Azimuth Type': 'Hidden', 'Ownship Latitude': 'Hidden', 'Ownship Longitude': 'Hidden', 'Ownship Altitude Feet': 'Hidden', 'Azimuth Accuracy Deg': 'Hidden', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Emitter Classification Status': 'Hidden', 'Emitter of Interest': 'Hidden', 'Unnamed: 26': 'Hidden', 'imo': 'Hidden', });
+lyr_PirateAttacks20002022Dataworld_4.set('fieldImages', {'incident_date': 'DateTime', 'ship_name': 'TextEdit', 'ship_flag': 'Hidden', 'ship_type': 'TextEdit', 'area': 'Hidden', 'latitude': 'TextEdit', 'longitude': 'TextEdit', 'consequences_to_crew': 'TextEdit', 'part_of_ship_raided': 'Hidden', 'ship_status': 'TextEdit', 'weapons_used': 'TextEdit', 'flag_crew_injuries': 'Hidden', 'flag_crew_held_hostage': 'Hidden', 'flag_crew_missing': 'Hidden', 'flag_crew_deaths': 'Hidden', 'flag_crew_assaulted': 'Hidden', 'location': 'TextEdit', });
+lyr_VesselDetectionReportvakeai_5.set('fieldImages', {'uuid': 'Hidden', 'timestamp': 'DateTime', 'correlated': 'Hidden', 'object_class': 'TextEdit', 'matching_label': 'TextEdit', 'length': 'Hidden', 'lon': 'TextEdit', 'lat': 'TextEdit', 'object_class_score': 'Hidden', 'estimation_score': 'Hidden', 'matching_score': 'Hidden', 'image_path': 'Hidden', 'image_source': 'TextEdit', 'course': 'Hidden', 'mmsi': 'TextEdit', 'URL': 'TextEdit', });
+lyr_KSLPRIDERoutePathSearoutes_6.set('fieldImages', {'draft': 'TextEdit', 'width': 'Hidden', 'length': 'Hidden', 'name': 'TextEdit', 'imo': 'Range', 'speedInKts': 'Range', 'speed': 'Range', 'duration': 'Hidden', 'departure': 'TextEdit', 'Longitude': 'TextEdit', 'Latitude': 'TextEdit', 'New_DT': 'Hidden', });
+lyr_PortsNaturalEarthData_7.set('fieldImages', {'scalerank': 'Hidden', 'featurecla': 'TextEdit', 'name': 'TextEdit', 'website': 'TextEdit', 'natlscale': 'Hidden', 'ne_id': 'Hidden', });
+lyr_AISMarineTrafficSouthIndianOcean_8.set('fieldImages', {'SHIP_ID': 'Hidden', 'IMO': 'Range', 'MMSI': 'Hidden', 'CALLSIGN': 'Hidden', 'SHIPNAME': 'TextEdit', 'TYPE_COLOR': 'Hidden', 'LAST_POS': 'Hidden', 'CODE2': 'Hidden', 'COUNTRY': 'TextEdit', 'NEXT_PORT_NAME': 'TextEdit', 'NEXT_PORT_COUNTRY': 'TextEdit', 'NEXT_PORT_ID': 'Hidden', 'ETA': 'Hidden', 'DESTINATION': 'TextEdit', 'CURRENT_PORT_COUNTRY': 'Hidden', 'TYPE_SUMMARY': 'Hidden', 'COURSE': 'TextEdit', 'LON': 'TextEdit', 'LAT': 'TextEdit', 'TIMEZONE': 'Hidden', 'AREA_CODE': 'Hidden', 'ETA_OFFSET': 'Hidden', 'SPEED': 'Hidden', 'LENGTH': 'Hidden', 'WIDTH': 'Hidden', 'ETA_UPDATED': 'TextEdit', 'DISTANCE_TO_GO': 'Hidden', 'PORT_ID': 'Hidden', 'CURRENT_PORT': 'Hidden', 'CTA_ROUTE_FORECAST': 'Hidden', });
+lyr_Earthquakesusgsgov_9.set('fieldImages', {'id': 'Hidden', 'title': 'TextEdit', 'updated': 'DateTime', 'link_rel': 'Hidden', 'link_type': 'Hidden', 'link_href': 'TextEdit', 'summary': 'TextEdit', 'summary_type': 'Hidden', 'georss_elev': 'Hidden', 'category_label': 'Hidden', 'category_term': 'Hidden', 'category2_label': 'Hidden', 'category2_term': 'Hidden', 'category3_label': 'Hidden', 'category3_term': 'Hidden', 'category4_label': 'Hidden', 'category4_term': 'Hidden', });
+lyr_NoticestoMariners_10.set('fieldImages', {'NOTICEID': 'TextEdit', 'COUNTRY': 'TextEdit', 'DATE': 'TextEdit', 'LAT': 'TextEdit', 'LONG': 'TextEdit', 'TYPE': 'TextEdit', 'IMO': 'TextEdit', 'DESCRIPTION': 'TextEdit', 'field_9': 'Hidden', });
+lyr_FlightDataOpenskyNetwork_11.set('fieldImages', {'icao24': 'TextEdit', 'callsign': 'TextEdit', 'origin_country': 'TextEdit', 'time_position': 'Hidden', 'last_contact': 'Hidden', 'long': 'TextEdit', 'lat': 'TextEdit', 'baro_altitude': 'Hidden', 'on_ground': 'CheckBox', 'velocity': 'Hidden', 'true_track': 'TextEdit', 'vertical_rate': 'Hidden', 'sensors': 'Hidden', 'geo_altitude': 'Hidden', 'squawk': 'Hidden', 'spi': 'Hidden', 'position_source': 'Hidden', });
+lyr_GEORSS26Aug24GoogleNews_12.set('fieldImages', {'Title': 'Hidden', 'Link': 'TextEdit', 'Target': 'Hidden', 'Description': 'TextEdit', 'Channel': 'TextEdit', 'PublishDate': 'TextEdit', 'lat': 'TextEdit', 'long': 'TextEdit', });
+lyr_MilitaryGrid_100_0_16.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', 'MGRS': 'TextEdit', });
+lyr_MilitaryGrid_17.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', });
+lyr_EEZBoundariesv8MarineRegions_18.set('fieldImages', {'Source': 'TextEdit', 'TYPE': 'TextEdit', 'Boundary': 'TextEdit', 'Country1': 'Range', 'Country2': 'Range', 'line_id': 'Range', 'TreatyDate': 'TextEdit', 'LastChange': 'TextEdit', });
+lyr_rf_data_1.set('fieldLabels', {'Timestamp': 'inline label - visible with data', 'Location': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'Device Type': 'inline label - visible with data', 'Antenna Type': 'inline label - visible with data', 'Temperature': 'inline label - visible with data', 'Humidity': 'inline label - visible with data', 'Wind Speed': 'inline label - visible with data', 'Weather Condition': 'inline label - visible with data', 'Interference Type': 'inline label - visible with data', 'WiFi Strength': 'inline label - visible with data', 'Altitude(m)': 'inline label - visible with data', 'Device Status': 'inline label - visible with data', });
+lyr_Ownship_2.set('fieldLabels', {'imo': 'inline label - visible with data', 'Msg Date YYYYMMDD': 'inline label - visible with data', 'Msg Time hh:mm:ss.sss': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', 'Altitude MSL Feet': 'inline label - visible with data', 'Heading True Deg': 'inline label - visible with data', 'Position Date YYYYMMDD': 'inline label - visible with data', 'Position Time hh:mm:ss.sss': 'inline label - visible with data', 'Ground Speed Kts': 'inline label - visible with data', });
+lyr_ESM_EMITER_MPAC_3.set('fieldLabels', {'Date YYYYMMDD': 'inline label - visible with data', 'Time hh:mm:ss.sss': 'inline label - visible with data', 'Emitter Intercept Time hh:mm:ss.sss': 'inline label - visible with data', 'Active Status': 'inline label - visible with data', 'Affiliation': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', });
+lyr_PirateAttacks20002022Dataworld_4.set('fieldLabels', {'incident_date': 'inline label - visible with data', 'ship_name': 'inline label - visible with data', 'ship_type': 'inline label - visible with data', 'latitude': 'inline label - visible with data', 'longitude': 'inline label - visible with data', 'consequences_to_crew': 'inline label - visible with data', 'ship_status': 'inline label - visible with data', 'weapons_used': 'inline label - visible with data', 'location': 'inline label - visible with data', });
+lyr_VesselDetectionReportvakeai_5.set('fieldLabels', {'timestamp': 'inline label - visible with data', 'object_class': 'inline label - visible with data', 'matching_label': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'image_source': 'no label', 'mmsi': 'inline label - visible with data', 'URL': 'header label - visible with data', });
+lyr_KSLPRIDERoutePathSearoutes_6.set('fieldLabels', {'draft': 'inline label - visible with data', 'name': 'inline label - visible with data', 'imo': 'inline label - visible with data', 'speedInKts': 'inline label - visible with data', 'speed': 'inline label - visible with data', 'departure': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', });
+lyr_PortsNaturalEarthData_7.set('fieldLabels', {'featurecla': 'inline label - visible with data', 'name': 'inline label - visible with data', 'website': 'header label - visible with data', });
+lyr_AISMarineTrafficSouthIndianOcean_8.set('fieldLabels', {'IMO': 'inline label - visible with data', 'SHIPNAME': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'NEXT_PORT_NAME': 'inline label - visible with data', 'NEXT_PORT_COUNTRY': 'inline label - visible with data', 'DESTINATION': 'inline label - visible with data', 'LON': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'ETA_UPDATED': 'inline label - visible with data', });
+lyr_Earthquakesusgsgov_9.set('fieldLabels', {'title': 'inline label - visible with data', 'updated': 'inline label - visible with data', 'link_href': 'header label - visible with data', 'summary': 'inline label - visible with data', });
+lyr_NoticestoMariners_10.set('fieldLabels', {'NOTICEID': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'DATE': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'LONG': 'inline label - visible with data', 'TYPE': 'inline label - visible with data', 'IMO': 'inline label - visible with data', 'DESCRIPTION': 'header label - visible with data', });
+lyr_FlightDataOpenskyNetwork_11.set('fieldLabels', {'icao24': 'inline label - visible with data', 'callsign': 'inline label - visible with data', 'origin_country': 'inline label - visible with data', 'long': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'on_ground': 'inline label - visible with data', 'true_track': 'inline label - visible with data', });
+lyr_GEORSS26Aug24GoogleNews_12.set('fieldLabels', {'Link': 'header label - visible with data', 'Description': 'header label - visible with data', 'Channel': 'inline label - visible with data', 'PublishDate': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'long': 'inline label - visible with data', });
+lyr_MilitaryGrid_100_0_16.set('fieldLabels', {'fid': 'inline label - visible with data', 'row_index': 'inline label - visible with data', 'col_index': 'inline label - visible with data', 'GZD': 'inline label - visible with data', 'MGRS': 'inline label - visible with data', });
+lyr_MilitaryGrid_17.set('fieldLabels', {'fid': 'inline label - visible with data', 'row_index': 'inline label - visible with data', 'col_index': 'inline label - visible with data', 'GZD': 'inline label - visible with data', });
+lyr_EEZBoundariesv8MarineRegions_18.set('fieldLabels', {'Source': 'inline label - visible with data', 'TYPE': 'inline label - visible with data', 'Boundary': 'inline label - visible with data', 'Country1': 'inline label - visible with data', 'Country2': 'inline label - visible with data', 'line_id': 'inline label - visible with data', 'TreatyDate': 'inline label - visible with data', 'LastChange': 'inline label - visible with data', });
+lyr_EEZBoundariesv8MarineRegions_18.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
