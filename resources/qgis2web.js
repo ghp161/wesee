@@ -7,16 +7,12 @@ var map = new ol.Map({
          maxZoom: 28, minZoom: 1, projection: new ol.proj.Projection({
             code: 'EPSG:4326',
             //extent: [-20037508.342789, -20037508.342789, 20037508.342789, 20037508.342789],
-            units: 'degrees'}),
-			center: ol.proj.fromLonLat([16.62662018, 49.2125578]),
-    zoom: 14
+            units: 'degrees'})
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-//map.setCenter(new ol.proj.fromLonLat(-93.9196,45.7326),5);
-map.getView().fit([61.533489, -12.026743, 120.876456, 25.945557], 5);
-//map.getView().fit([20, -80, 140, 30], map.getSize());
+map.getView().fit([-45.387361, -58.820191, 146.703855, 68.636559], map.getSize());
 
 ////controls container
 
@@ -137,7 +133,7 @@ function createPopupField(currentFeature, currentFeatureKeys, layer) {
             }
             if (layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label - always visible" ||
                 layer.get('fieldLabels')[currentFeatureKeys[i]] == "inline label - visible with data") {
-                popupField += '<th>' + titleCase(layer.get('fieldAliases')[currentFeatureKeys[i]]) + '</th><td>';	//hari add titlecase
+                popupField += '<th>' +  titleCase(layer.get('fieldAliases')[currentFeatureKeys[i]]) + '</th><td>';	//hari add titlecase
             } else {
                 popupField += '<td colspan="2">';
             }
@@ -867,7 +863,7 @@ map.on("rendercomplete", function(evt) {
 			button.parentNode.removeChild(button);
 		}
 		var attributionList = attribution.getElementsByTagName('ul')[0];
-		 if (attributionList) {
+		if (attributionList) {
 			var qgis2webAttribution = document.createElement('li');
 			qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a> &middot; ';
 			attributionList.appendChild(qgis2webAttribution);
@@ -879,7 +875,7 @@ map.on("rendercomplete", function(evt) {
 			var qgisAttribution = document.createElement('li');
 			qgisAttribution.innerHTML = '<a href="https://qgis.org/">QGIS</a>';
 			attributionList.appendChild(qgisAttribution);
-		} 
+		}
 	attributionComplete = true;
 	}
 })
