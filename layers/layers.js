@@ -1,5 +1,5 @@
 ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4326").setExtent([-139.131849, -105.490437, 157.582983, 84.371063]);
+//ol.proj.get("EPSG:4326").setExtent([-45.387361, -58.820191, 146.703855, 68.636559]);
 var wms_layers = [];
 
 
@@ -295,13 +295,122 @@ var lyr_EEZBoundariesv8MarineRegions_18 = new ol.layer.Vector({
                 interactive: true,
                 title: '<img src="styles/legend/EEZBoundariesv8MarineRegions_18.png" /> EEZ Boundaries v8 Marine Regions'
             });
+var format_TropicalCyclone_2024080_19 = new ol.format.GeoJSON();
+var features_TropicalCyclone_2024080_19 = format_TropicalCyclone_2024080_19.readFeatures(json_TropicalCyclone_2024080_19, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_TropicalCyclone_2024080_19 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_TropicalCyclone_2024080_19.addFeatures(features_TropicalCyclone_2024080_19);
+var lyr_TropicalCyclone_2024080_19 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_TropicalCyclone_2024080_19, 
+                style: style_TropicalCyclone_2024080_19,
+                popuplayertitle: "Tropical Cyclone_2024080",
+                interactive: true,
+                title: '<img src="styles/legend/TropicalCyclone_2024080_19.png" /> Tropical Cyclone_2024080'
+            });
+var format_2024080_20 = new ol.format.GeoJSON();
+var features_2024080_20 = format_2024080_20.readFeatures(json_2024080_20, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_2024080_20 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_2024080_20.addFeatures(features_2024080_20);
+var lyr_2024080_20 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_2024080_20, 
+                style: style_2024080_20,
+                popuplayertitle: "2024080",
+                interactive: true,
+                title: '<img src="styles/legend/2024080_20.png" /> 2024080'
+            });
+var format_2024081_21 = new ol.format.GeoJSON();
+var features_2024081_21 = format_2024081_21.readFeatures(json_2024081_21, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_2024081_21 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_2024081_21.addFeatures(features_2024081_21);
+var lyr_2024081_21 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_2024081_21, 
+                style: style_2024081_21,
+                popuplayertitle: "2024081",
+                interactive: true,
+                title: '<img src="styles/legend/2024081_21.png" /> 2024081'
+            });
+var format_TropicalCyclone_2024081_22 = new ol.format.GeoJSON();
+var features_TropicalCyclone_2024081_22 = format_TropicalCyclone_2024081_22.readFeatures(json_TropicalCyclone_2024081_22, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_TropicalCyclone_2024081_22 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_TropicalCyclone_2024081_22.addFeatures(features_TropicalCyclone_2024081_22);
+var lyr_TropicalCyclone_2024081_22 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_TropicalCyclone_2024081_22, 
+                style: style_TropicalCyclone_2024081_22,
+                popuplayertitle: "Tropical Cyclone_2024081",
+                interactive: true,
+                title: '<img src="styles/legend/TropicalCyclone_2024081_22.png" /> Tropical Cyclone_2024081'
+            });
+var format_tropical_23 = new ol.format.GeoJSON();
+var features_tropical_23 = format_tropical_23.readFeatures(json_tropical_23, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_tropical_23 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_tropical_23.addFeatures(features_tropical_23);
+var lyr_tropical_23 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_tropical_23, 
+                style: style_tropical_23,
+                popuplayertitle: "tropical",
+                interactive: true,
+                title: '<img src="styles/legend/tropical_23.png" /> tropical'
+            });
+var format_HeavyRain_24 = new ol.format.GeoJSON();
+var features_HeavyRain_24 = format_HeavyRain_24.readFeatures(json_HeavyRain_24, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_HeavyRain_24 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_HeavyRain_24.addFeatures(features_HeavyRain_24);
+var lyr_HeavyRain_24 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_HeavyRain_24, 
+                style: style_HeavyRain_24,
+                popuplayertitle: "HeavyRain",
+                interactive: true,
+                title: '<img src="styles/legend/HeavyRain_24.png" /> HeavyRain'
+            });
+var format_Thunderstorms_25 = new ol.format.GeoJSON();
+var features_Thunderstorms_25 = format_Thunderstorms_25.readFeatures(json_Thunderstorms_25, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_Thunderstorms_25 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_Thunderstorms_25.addFeatures(features_Thunderstorms_25);
+var lyr_Thunderstorms_25 = new ol.layer.Vector({
+                declutter: false,
+                source:jsonSource_Thunderstorms_25, 
+                style: style_Thunderstorms_25,
+                popuplayertitle: "Thunderstorms",
+                interactive: true,
+                title: '<img src="styles/legend/Thunderstorms_25.png" /> Thunderstorms'
+            });
+var group_Weather = new ol.layer.Group({
+                                layers: [lyr_TropicalCyclone_2024080_19,lyr_2024080_20,lyr_2024081_21,lyr_TropicalCyclone_2024081_22,lyr_tropical_23,lyr_HeavyRain_24,lyr_Thunderstorms_25,],
+                                fold: "open",
+                                title: "Weather"});
 var group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079 = new ol.layer.Group({
                                 layers: [lyr_analysis_error_14,lyr_analysed_sst_15,],
                                 fold: "open",
                                 title: "METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2_1724506919079"});
-
-lyr_GoogleRoad_0.setVisible(true);lyr_rf_data_1.setVisible(false);lyr_Ownship_2.setVisible(false);lyr_ESM_EMITER_MPAC_3.setVisible(false);lyr_PirateAttacks20002022Dataworld_4.setVisible(false);lyr_VesselDetectionReportvakeai_5.setVisible(false);lyr_KSLPRIDERoutePathSearoutes_6.setVisible(false);lyr_PortsNaturalEarthData_7.setVisible(false);lyr_AISMarineTrafficSouthIndianOcean_8.setVisible(false);lyr_Earthquakesusgsgov_9.setVisible(false);lyr_NoticestoMariners_10.setVisible(false);lyr_FlightDataOpenskyNetwork_11.setVisible(false);lyr_GEORSS26Aug24GoogleNews_12.setVisible(false);lyr_VizaqPortSatelliteImage_13.setVisible(false);lyr_analysis_error_14.setVisible(false);lyr_analysed_sst_15.setVisible(false);lyr_MilitaryGrid_100_0_16.setVisible(false);lyr_MilitaryGrid_17.setVisible(false);lyr_EEZBoundariesv8MarineRegions_18.setVisible(false);
-var layersList = [lyr_GoogleRoad_0,lyr_rf_data_1,lyr_Ownship_2,lyr_ESM_EMITER_MPAC_3,lyr_PirateAttacks20002022Dataworld_4,lyr_VesselDetectionReportvakeai_5,lyr_KSLPRIDERoutePathSearoutes_6,lyr_PortsNaturalEarthData_7,lyr_AISMarineTrafficSouthIndianOcean_8,lyr_Earthquakesusgsgov_9,lyr_NoticestoMariners_10,lyr_FlightDataOpenskyNetwork_11,lyr_GEORSS26Aug24GoogleNews_12,lyr_VizaqPortSatelliteImage_13,group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079,lyr_MilitaryGrid_100_0_16,lyr_MilitaryGrid_17,lyr_EEZBoundariesv8MarineRegions_18];
+//hari
+lyr_GoogleRoad_0.setVisible(true);lyr_rf_data_1.setVisible(false);lyr_Ownship_2.setVisible(false);lyr_ESM_EMITER_MPAC_3.setVisible(false);lyr_PirateAttacks20002022Dataworld_4.setVisible(false);lyr_VesselDetectionReportvakeai_5.setVisible(false);lyr_KSLPRIDERoutePathSearoutes_6.setVisible(false);lyr_PortsNaturalEarthData_7.setVisible(false);lyr_AISMarineTrafficSouthIndianOcean_8.setVisible(false);lyr_Earthquakesusgsgov_9.setVisible(false);lyr_NoticestoMariners_10.setVisible(false);lyr_FlightDataOpenskyNetwork_11.setVisible(false);lyr_GEORSS26Aug24GoogleNews_12.setVisible(false);lyr_VizaqPortSatelliteImage_13.setVisible(false);lyr_analysis_error_14.setVisible(false);lyr_analysed_sst_15.setVisible(false);lyr_MilitaryGrid_100_0_16.setVisible(false);lyr_MilitaryGrid_17.setVisible(false);lyr_EEZBoundariesv8MarineRegions_18.setVisible(false);lyr_TropicalCyclone_2024080_19.setVisible(false);lyr_2024080_20.setVisible(false);lyr_2024081_21.setVisible(false);lyr_TropicalCyclone_2024081_22.setVisible(false);lyr_tropical_23.setVisible(false);lyr_HeavyRain_24.setVisible(false);lyr_Thunderstorms_25.setVisible(false);
+var layersList = [lyr_GoogleRoad_0,lyr_rf_data_1,lyr_Ownship_2,lyr_ESM_EMITER_MPAC_3,lyr_PirateAttacks20002022Dataworld_4,lyr_VesselDetectionReportvakeai_5,lyr_KSLPRIDERoutePathSearoutes_6,lyr_PortsNaturalEarthData_7,lyr_AISMarineTrafficSouthIndianOcean_8,lyr_Earthquakesusgsgov_9,lyr_NoticestoMariners_10,lyr_FlightDataOpenskyNetwork_11,lyr_GEORSS26Aug24GoogleNews_12,lyr_VizaqPortSatelliteImage_13,group_METOFFICEGLOSSTL4NRTOBSSSTV2_1724506919079,lyr_MilitaryGrid_100_0_16,lyr_MilitaryGrid_17,lyr_EEZBoundariesv8MarineRegions_18,group_Weather];
 lyr_rf_data_1.set('fieldAliases', {'Timestamp': 'Timestamp', 'Frequency': 'Frequency', 'Signal Strength': 'Signal Strength', 'Modulation': 'Modulation', 'Bandwidth': 'Bandwidth', 'Location': 'Location', 'lat': 'lat', 'lon': 'lon', 'Device Type': 'Device Type', 'Antenna Type': 'Antenna Type', 'Temperature': 'Temperature', 'Humidity': 'Humidity', 'Wind Speed': 'Wind Speed', 'Precipitation': 'Precipitation', 'Weather Condition': 'Weather Condition', 'Interference Type': 'Interference Type', 'Battery Level': 'Battery Level', 'Power Source': 'Power Source', 'CPU Usage': 'CPU Usage', 'Memory Usage': 'Memory Usage', 'WiFi Strength': 'WiFi Strength', 'Disk Usage': 'Disk Usage', 'System Load': 'System Load', 'Altitude(m)': 'Altitude(m)', 'Air Pressure': 'Air Pressure', 'Device Status': 'Device Status', 'I/Q Data': 'I/Q Data', });
 lyr_Ownship_2.set('fieldAliases', {'imo': 'imo', 'Msg Date YYYYMMDD': 'Msg Date YYYYMMDD', 'Msg Time hh:mm:ss.sss': 'Msg Time hh:mm:ss.sss', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Altitude MSL Feet': 'Altitude MSL Feet', 'Heading True Deg': 'Heading True Deg', 'Position Date YYYYMMDD': 'Position Date YYYYMMDD', 'Position Time hh:mm:ss.sss': 'Position Time hh:mm:ss.sss', 'Ground Speed Kts': 'Ground Speed Kts', });
 lyr_ESM_EMITER_MPAC_3.set('fieldAliases', {'field_1': 'field_1', 'Date YYYYMMDD': 'Date YYYYMMDD', 'Time hh:mm:ss.sss': 'Time hh:mm:ss.sss', 'Emitter Enumeration': 'Emitter Enumeration', 'Strongest Beam Enumeration': 'Strongest Beam Enumeration', 'Change Type': 'Change Type', 'Manually Assigned Emitter': 'Manually Assigned Emitter', 'Azimuth Deg': 'Azimuth Deg', 'Emitter Intercept Date YYYYMMDD': 'Emitter Intercept Date YYYYMMDD', 'Emitter Intercept Time hh:mm:ss.sss': 'Emitter Intercept Time hh:mm:ss.sss', 'Active Status': 'Active Status', 'Affiliation': 'Affiliation', 'Evironment': 'Evironment', 'Associated Weapon System': 'Associated Weapon System', 'Associated Target': 'Associated Target', 'Priority': 'Priority', 'Confidence': 'Confidence', 'Range Nm': 'Range Nm', 'Azimuth Type': 'Azimuth Type', 'Ownship Latitude': 'Ownship Latitude', 'Ownship Longitude': 'Ownship Longitude', 'Ownship Altitude Feet': 'Ownship Altitude Feet', 'Azimuth Accuracy Deg': 'Azimuth Accuracy Deg', 'Latitude': 'Latitude', 'Longitude': 'Longitude', 'Emitter Classification Status': 'Emitter Classification Status', 'Emitter of Interest': 'Emitter of Interest', 'Unnamed: 26': 'Unnamed: 26', 'imo': 'imo', });
@@ -317,6 +426,13 @@ lyr_GEORSS26Aug24GoogleNews_12.set('fieldAliases', {'Title': 'Title', 'Link': 'L
 lyr_MilitaryGrid_100_0_16.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', 'MGRS': 'MGRS', });
 lyr_MilitaryGrid_17.set('fieldAliases', {'fid': 'fid', 'row_index': 'row_index', 'col_index': 'col_index', 'GZD': 'GZD', });
 lyr_EEZBoundariesv8MarineRegions_18.set('fieldAliases', {'Source': 'Source', 'TYPE': 'TYPE', 'Boundary': 'Boundary', 'Country1': 'Country1', 'Country2': 'Country2', 'line_id': 'line_id', 'TreatyDate': 'TreatyDate', 'LastChange': 'LastChange', });
+lyr_TropicalCyclone_2024080_19.set('fieldAliases', {'analysis_time': 'analysis_time', 'intensity': 'intensity', 'tc_name': 'tc_name', 'tc_id': 'tc_id', 'lat': 'lat', 'lng': 'lng', 'speed_of_movement': 'speed_of_movement', 'movement_direction': 'movement_direction', 'pressure': 'pressure', 'max_wind_speed': 'max_wind_speed', 'gust': 'gust', 'wind_radii': 'wind_radii', 'center_id': 'center_id', });
+lyr_2024080_20.set('fieldAliases', {'fid': 'fid', 'begin': 'begin', 'end': 'end', });
+lyr_2024081_21.set('fieldAliases', {'fid': 'fid', 'begin': 'begin', 'end': 'end', });
+lyr_TropicalCyclone_2024081_22.set('fieldAliases', {'analysis_time': 'analysis_time', 'intensity': 'intensity', 'tc_name': 'tc_name', 'tc_id': 'tc_id', 'lat': 'lat', 'lng': 'lng', 'speed_of_movement': 'speed_of_movement', 'movement_direction': 'movement_direction', 'pressure': 'pressure', 'max_wind_speed': 'max_wind_speed', 'gust': 'gust', 'wind_radii': 'wind_radii', 'center_id': 'center_id', });
+lyr_tropical_23.set('fieldAliases', {'analysis_time': 'analysis_time', 'intensity': 'intensity', 'tc_name': 'tc_name', 'tc_id': 'tc_id', 'lat': 'lat', 'lng': 'lng', 'speed_of_movement': 'speed_of_movement', 'movement_direction': 'movement_direction', 'pressure': 'pressure', 'max_wind_speed': 'max_wind_speed', 'gust': 'gust', 'wind_radii': 'wind_radii', 'center_id': 'center_id', });
+lyr_HeavyRain_24.set('fieldAliases', {'station': 'station', 'lat': 'lat', 'lon': 'lon', 'hp': 'hp', 'country': 'country', 'hvyrain': 'hvyrain', });
+lyr_Thunderstorms_25.set('fieldAliases', {'station': 'station', 'lat': 'lat', 'lon': 'lon', 'hp': 'hp', 'country': 'country', 'thunderstorms': 'thunderstorms', 'datetime': 'datetime', });
 lyr_rf_data_1.set('fieldImages', {'Timestamp': 'TextEdit', 'Frequency': 'Hidden', 'Signal Strength': 'Hidden', 'Modulation': 'Hidden', 'Bandwidth': 'Hidden', 'Location': 'TextEdit', 'lat': 'TextEdit', 'lon': 'TextEdit', 'Device Type': 'TextEdit', 'Antenna Type': 'TextEdit', 'Temperature': 'Range', 'Humidity': 'Range', 'Wind Speed': 'Range', 'Precipitation': 'Hidden', 'Weather Condition': 'TextEdit', 'Interference Type': 'TextEdit', 'Battery Level': 'Hidden', 'Power Source': 'Hidden', 'CPU Usage': 'Hidden', 'Memory Usage': 'Hidden', 'WiFi Strength': 'Range', 'Disk Usage': 'Hidden', 'System Load': 'Hidden', 'Altitude(m)': 'TextEdit', 'Air Pressure': 'Hidden', 'Device Status': 'TextEdit', 'I/Q Data': 'Hidden', });
 lyr_Ownship_2.set('fieldImages', {'imo': 'Range', 'Msg Date YYYYMMDD': 'Range', 'Msg Time hh:mm:ss.sss': 'TextEdit', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Altitude MSL Feet': 'Range', 'Heading True Deg': 'TextEdit', 'Position Date YYYYMMDD': 'Range', 'Position Time hh:mm:ss.sss': 'TextEdit', 'Ground Speed Kts': 'TextEdit', });
 lyr_ESM_EMITER_MPAC_3.set('fieldImages', {'field_1': 'Hidden', 'Date YYYYMMDD': 'TextEdit', 'Time hh:mm:ss.sss': 'TextEdit', 'Emitter Enumeration': 'Hidden', 'Strongest Beam Enumeration': 'Hidden', 'Change Type': 'Hidden', 'Manually Assigned Emitter': 'Hidden', 'Azimuth Deg': 'Hidden', 'Emitter Intercept Date YYYYMMDD': 'Hidden', 'Emitter Intercept Time hh:mm:ss.sss': 'TextEdit', 'Active Status': 'CheckBox', 'Affiliation': 'TextEdit', 'Evironment': 'Hidden', 'Associated Weapon System': 'Hidden', 'Associated Target': 'Hidden', 'Priority': 'Hidden', 'Confidence': 'Hidden', 'Range Nm': 'Hidden', 'Azimuth Type': 'Hidden', 'Ownship Latitude': 'Hidden', 'Ownship Longitude': 'Hidden', 'Ownship Altitude Feet': 'Hidden', 'Azimuth Accuracy Deg': 'Hidden', 'Latitude': 'TextEdit', 'Longitude': 'TextEdit', 'Emitter Classification Status': 'Hidden', 'Emitter of Interest': 'Hidden', 'Unnamed: 26': 'Hidden', 'imo': 'Hidden', });
@@ -332,21 +448,35 @@ lyr_GEORSS26Aug24GoogleNews_12.set('fieldImages', {'Title': 'Hidden', 'Link': 'T
 lyr_MilitaryGrid_100_0_16.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', 'MGRS': 'TextEdit', });
 lyr_MilitaryGrid_17.set('fieldImages', {'fid': 'TextEdit', 'row_index': 'TextEdit', 'col_index': 'TextEdit', 'GZD': 'TextEdit', });
 lyr_EEZBoundariesv8MarineRegions_18.set('fieldImages', {'Source': 'TextEdit', 'TYPE': 'TextEdit', 'Boundary': 'TextEdit', 'Country1': 'Range', 'Country2': 'Range', 'line_id': 'Range', 'TreatyDate': 'TextEdit', 'LastChange': 'TextEdit', });
+lyr_TropicalCyclone_2024080_19.set('fieldImages', {'analysis_time': 'TextEdit', 'intensity': 'TextEdit', 'tc_name': 'TextEdit', 'tc_id': 'Hidden', 'lat': 'TextEdit', 'lng': 'TextEdit', 'speed_of_movement': 'TextEdit', 'movement_direction': 'TextEdit', 'pressure': 'Range', 'max_wind_speed': 'Range', 'gust': 'Hidden', 'wind_radii': 'TextEdit', 'center_id': 'Hidden', });
+lyr_2024080_20.set('fieldImages', {'fid': 'TextEdit', 'begin': 'DateTime', 'end': 'DateTime', });
+lyr_2024081_21.set('fieldImages', {'fid': 'Hidden', 'begin': 'Hidden', 'end': 'Hidden', });
+lyr_TropicalCyclone_2024081_22.set('fieldImages', {'analysis_time': 'TextEdit', 'intensity': 'TextEdit', 'tc_name': 'TextEdit', 'tc_id': 'Hidden', 'lat': 'TextEdit', 'lng': 'TextEdit', 'speed_of_movement': 'TextEdit', 'movement_direction': 'TextEdit', 'pressure': 'Range', 'max_wind_speed': 'Range', 'gust': 'Hidden', 'wind_radii': 'TextEdit', 'center_id': 'Hidden', });
+lyr_tropical_23.set('fieldImages', {'analysis_time': 'Hidden', 'intensity': 'Hidden', 'tc_name': 'Hidden', 'tc_id': 'Hidden', 'lat': 'Hidden', 'lng': 'Hidden', 'speed_of_movement': 'Hidden', 'movement_direction': 'Hidden', 'pressure': 'Hidden', 'max_wind_speed': 'Hidden', 'gust': 'Hidden', 'wind_radii': 'Hidden', 'center_id': 'Hidden', });
+lyr_HeavyRain_24.set('fieldImages', {'station': 'TextEdit', 'lat': 'TextEdit', 'lon': 'TextEdit', 'hp': 'TextEdit', 'country': 'TextEdit', 'hvyrain': 'TextEdit', });
+lyr_Thunderstorms_25.set('fieldImages', {'station': 'TextEdit', 'lat': 'TextEdit', 'lon': 'TextEdit', 'hp': 'TextEdit', 'country': 'TextEdit', 'thunderstorms': 'Range', 'datetime': 'Range', });
 lyr_rf_data_1.set('fieldLabels', {'Timestamp': 'inline label - visible with data', 'Location': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'Device Type': 'inline label - visible with data', 'Antenna Type': 'inline label - visible with data', 'Temperature': 'inline label - visible with data', 'Humidity': 'inline label - visible with data', 'Wind Speed': 'inline label - visible with data', 'Weather Condition': 'inline label - visible with data', 'Interference Type': 'inline label - visible with data', 'WiFi Strength': 'inline label - visible with data', 'Altitude(m)': 'inline label - visible with data', 'Device Status': 'inline label - visible with data', });
 lyr_Ownship_2.set('fieldLabels', {'imo': 'inline label - visible with data', 'Msg Date YYYYMMDD': 'inline label - visible with data', 'Msg Time hh:mm:ss.sss': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', 'Altitude MSL Feet': 'inline label - visible with data', 'Heading True Deg': 'inline label - visible with data', 'Position Date YYYYMMDD': 'inline label - visible with data', 'Position Time hh:mm:ss.sss': 'inline label - visible with data', 'Ground Speed Kts': 'inline label - visible with data', });
 lyr_ESM_EMITER_MPAC_3.set('fieldLabels', {'Date YYYYMMDD': 'inline label - visible with data', 'Time hh:mm:ss.sss': 'inline label - visible with data', 'Emitter Intercept Time hh:mm:ss.sss': 'inline label - visible with data', 'Active Status': 'inline label - visible with data', 'Affiliation': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', });
 lyr_PirateAttacks20002022Dataworld_4.set('fieldLabels', {'incident_date': 'inline label - visible with data', 'ship_name': 'inline label - visible with data', 'ship_type': 'inline label - visible with data', 'latitude': 'inline label - visible with data', 'longitude': 'inline label - visible with data', 'consequences_to_crew': 'inline label - visible with data', 'ship_status': 'inline label - visible with data', 'weapons_used': 'inline label - visible with data', 'location': 'inline label - visible with data', });
-lyr_VesselDetectionReportvakeai_5.set('fieldLabels', {'timestamp': 'inline label - visible with data', 'object_class': 'inline label - visible with data', 'matching_label': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'image_source': 'no label', 'mmsi': 'inline label - visible with data', 'URL': 'header label - visible with data', });
+lyr_VesselDetectionReportvakeai_5.set('fieldLabels', {'timestamp': 'inline label - visible with data', 'object_class': 'inline label - visible with data', 'matching_label': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'image_source': 'inline label - visible with data', 'mmsi': 'inline label - visible with data', 'URL': 'inline label - visible with data', });
 lyr_KSLPRIDERoutePathSearoutes_6.set('fieldLabels', {'draft': 'inline label - visible with data', 'name': 'inline label - visible with data', 'imo': 'inline label - visible with data', 'speedInKts': 'inline label - visible with data', 'speed': 'inline label - visible with data', 'departure': 'inline label - visible with data', 'Longitude': 'inline label - visible with data', 'Latitude': 'inline label - visible with data', });
-lyr_PortsNaturalEarthData_7.set('fieldLabels', {'featurecla': 'inline label - visible with data', 'name': 'inline label - visible with data', 'website': 'header label - visible with data', });
-lyr_AISMarineTrafficSouthIndianOcean_8.set('fieldLabels', {'IMO': 'inline label - visible with data', 'SHIPNAME': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'NEXT_PORT_NAME': 'inline label - visible with data', 'NEXT_PORT_COUNTRY': 'inline label - visible with data', 'DESTINATION': 'inline label - visible with data', 'LON': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'ETA_UPDATED': 'inline label - visible with data', });
-lyr_Earthquakesusgsgov_9.set('fieldLabels', {'title': 'inline label - visible with data', 'updated': 'inline label - visible with data', 'link_href': 'header label - visible with data', 'summary': 'inline label - visible with data', });
-lyr_NoticestoMariners_10.set('fieldLabels', {'NOTICEID': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'DATE': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'LONG': 'inline label - visible with data', 'TYPE': 'inline label - visible with data', 'IMO': 'inline label - visible with data', 'DESCRIPTION': 'header label - visible with data', });
+lyr_PortsNaturalEarthData_7.set('fieldLabels', {'featurecla': 'inline label - visible with data', 'name': 'inline label - visible with data', 'website': 'inline label - visible with data', });
+lyr_AISMarineTrafficSouthIndianOcean_8.set('fieldLabels', {'IMO': 'inline label - visible with data', 'SHIPNAME': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'NEXT_PORT_NAME': 'inline label - visible with data', 'NEXT_PORT_COUNTRY': 'inline label - visible with data', 'DESTINATION': 'inline label - visible with data', 'COURSE': 'inline label - visible with data', 'LON': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'ETA_UPDATED': 'inline label - visible with data', });
+lyr_Earthquakesusgsgov_9.set('fieldLabels', {'title': 'inline label - visible with data', 'updated': 'inline label - visible with data', 'link_href': 'inline label - visible with data', 'summary': 'inline label - visible with data', });
+lyr_NoticestoMariners_10.set('fieldLabels', {'NOTICEID': 'inline label - visible with data', 'COUNTRY': 'inline label - visible with data', 'DATE': 'inline label - visible with data', 'LAT': 'inline label - visible with data', 'LONG': 'inline label - visible with data', 'TYPE': 'inline label - visible with data', 'IMO': 'inline label - visible with data', 'DESCRIPTION': 'inline label - visible with data', });
 lyr_FlightDataOpenskyNetwork_11.set('fieldLabels', {'icao24': 'inline label - visible with data', 'callsign': 'inline label - visible with data', 'origin_country': 'inline label - visible with data', 'long': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'on_ground': 'inline label - visible with data', 'true_track': 'inline label - visible with data', });
-lyr_GEORSS26Aug24GoogleNews_12.set('fieldLabels', {'Link': 'header label - visible with data', 'Description': 'header label - visible with data', 'Channel': 'inline label - visible with data', 'PublishDate': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'long': 'inline label - visible with data', });
+lyr_GEORSS26Aug24GoogleNews_12.set('fieldLabels', {'Link': 'inline label - visible with data', 'Description': 'inline label - visible with data', 'Channel': 'inline label - visible with data', 'PublishDate': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'long': 'inline label - visible with data', });
 lyr_MilitaryGrid_100_0_16.set('fieldLabels', {'fid': 'inline label - visible with data', 'row_index': 'inline label - visible with data', 'col_index': 'inline label - visible with data', 'GZD': 'inline label - visible with data', 'MGRS': 'inline label - visible with data', });
 lyr_MilitaryGrid_17.set('fieldLabels', {'fid': 'inline label - visible with data', 'row_index': 'inline label - visible with data', 'col_index': 'inline label - visible with data', 'GZD': 'inline label - visible with data', });
 lyr_EEZBoundariesv8MarineRegions_18.set('fieldLabels', {'Source': 'inline label - visible with data', 'TYPE': 'inline label - visible with data', 'Boundary': 'inline label - visible with data', 'Country1': 'inline label - visible with data', 'Country2': 'inline label - visible with data', 'line_id': 'inline label - visible with data', 'TreatyDate': 'inline label - visible with data', 'LastChange': 'inline label - visible with data', });
-lyr_EEZBoundariesv8MarineRegions_18.on('precompose', function(evt) {
+lyr_TropicalCyclone_2024080_19.set('fieldLabels', {'analysis_time': 'inline label - visible with data', 'intensity': 'inline label - visible with data', 'tc_name': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lng': 'inline label - visible with data', 'speed_of_movement': 'inline label - visible with data', 'movement_direction': 'inline label - visible with data', 'pressure': 'inline label - visible with data', 'max_wind_speed': 'inline label - visible with data', 'wind_radii': 'inline label - visible with data', });
+lyr_2024080_20.set('fieldLabels', {'fid': 'inline label - visible with data', 'begin': 'inline label - visible with data', 'end': 'inline label - visible with data', });
+lyr_2024081_21.set('fieldLabels', {});
+lyr_TropicalCyclone_2024081_22.set('fieldLabels', {'analysis_time': 'inline label - visible with data', 'intensity': 'inline label - visible with data', 'tc_name': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lng': 'inline label - visible with data', 'speed_of_movement': 'inline label - visible with data', 'movement_direction': 'inline label - visible with data', 'pressure': 'inline label - visible with data', 'max_wind_speed': 'inline label - visible with data', 'wind_radii': 'inline label - visible with data', });
+lyr_tropical_23.set('fieldLabels', {});
+lyr_HeavyRain_24.set('fieldLabels', {'station': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'hp': 'inline label - visible with data', 'country': 'inline label - visible with data', 'hvyrain': 'inline label - visible with data', });
+lyr_Thunderstorms_25.set('fieldLabels', {'station': 'inline label - visible with data', 'lat': 'inline label - visible with data', 'lon': 'inline label - visible with data', 'hp': 'inline label - visible with data', 'country': 'inline label - visible with data', 'thunderstorms': 'inline label - visible with data', 'datetime': 'inline label - visible with data', });
+lyr_Thunderstorms_25.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });

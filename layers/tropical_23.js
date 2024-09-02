@@ -1,0 +1,1 @@
+var json_tropical_23 = {"type":"FeatureCollection","name":"tropical_23","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[63.3,23.5]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[124.0,14.4]}}]}
