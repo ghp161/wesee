@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  wesee:
+    image: mdlmagistrala/wesee:${DOCKER_IMAGE_TAG}
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./images:/usr/share/nginx/html/images:ro
+      - ./layers:/usr/share/nginx/html/layers:ro
+      - ./resources:/usr/share/nginx/html/resources:ro
+      - ./styles:/usr/share/nginx/html/styles:ro
+      - ./webfonts:/usr/share/nginx/html/webfonts:ro
